@@ -1,0 +1,666 @@
+﻿<div class="ui-body-d Div-Content1" style="border-style:none;border-width:0px;">
+    <div class="Div-Content2 HVAC">
+        <page-system-title title="{{Solution.solutionName}}" page="{{page}}" airflow="{{RunningCond.totalSystemAirflow}}" airflowunit="{{Setting.unit.airFlow}}" theme="f" show-button="false" button-href="" button-on-click="" button-style="" add-space="false"></page-system-title>
+        <div data-role="fieldcontain">
+            <div class="ui-field-contain">
+                <label for="txtSolutionName">{{ "Solution name" | translate }}</label>
+                <input id="txtSolutionName" type="text" data-mini="true" ng-model="Solution.solutionName" />
+            </div>
+        </div>
+        <div class="ui-field-contain cbxNonEditableDropDownList">
+            <label for="cboTotalStages{{page}}">Total stages</label>
+            <select id="cboTotalStages{{page}}" data-mini="true" ng-model="Solution.totalStage">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>
+                    <label>{{ "Filter lifetime criteria" | translate }}</label>
+                </legend>
+                <input id="rdbFinalDP{{page}}" type="radio" name="FilterLifeTimeCriteria" value="FINALDP" data-theme="d" ng-checked="true" checked="checked" ng-click="ChangeFilterLifetimeCriteria('FINALDP',true);" ng-model="Solution.filterLifetimeCriteria" />
+                <label id="lblrdbFinalDP{{page}}" for="rdbFinalDP{{page}}" data-mini="true">{{ "Final DP" | translate }} [{{Setting.unit.pressureDrop}}]</label>
+                <input id="rdbTime{{page}}" type="radio" name="FilterLifeTimeCriteria" value="TIME" data-theme="d" ng-checked="true" checked="checked" ng-click="ChangeFilterLifetimeCriteria('TIME',true);" ng-model="Solution.filterLifetimeCriteria" />
+                <label id="lblrdbTime{{page}}" for="rdbTime{{page}}" data-mini="true">{{ "Time [hours]" | translate }} </label>
+            </fieldset>
+        </div>
+        <div class="Div-Content2 FilterSolution">
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="horizontal" class="title">
+                    <legend>
+                        <span><h3>{{ "Select Filter" | translate }}</h3></span>
+                    </legend>
+                    <div>
+                        <table style="width:111%;max-width:111%">
+                            <tr>
+                                <td class="tblFilter" style="width:33.33%;">
+                                    <div class="ui-block-a selectFilter" style="width:100%;">
+                                        <div class="ui-bar ui-bar-b selectFilter pageMenuHeader">
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%" style="margin: -7px 0px 0px 0px;padding: 0px;">
+                                                <tr>
+                                                    <td width="5%">&nbsp;</td>
+                                                    <td width="85%">
+                                                        <label style="margin-top: 4px;"><strong>{{GetStageName(1)}}</strong></label>
+                                                    </td>
+                                                    <td width="10%" align="right" style="width:40px;height:40px;">
+                                                        <a ng-href="#" ng-show="showTotalStage(1)" ng-click="ShowSelectFilter(1,'{{page}}')" style="background-color: transparent;border-style: none;">
+                                                            <img src="images/zoom.png" class="imgBtn labelLinkBtnWithImg" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tblFilter" style="width:33.33%;">
+                                    <div class="ui-block-b selectFilter" style="width:100%;">
+                                        <div class="ui-bar ui-bar-b selectFilter pageMenuHeader">
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%" style="margin: -7px 0px 0px 0px;padding: 0px;">
+                                                <tr>
+                                                    <td width="5%">&nbsp;</td>
+                                                    <td width="85%">
+                                                        <label style="margin-top: 4px;"><strong>{{GetStageName(2)}}</strong></label>
+                                                    </td>
+                                                    <td width="10%" align="right" style="width:40px;height:40px;">
+                                                        <a ng-href="#" ng-show="showTotalStage(2)" ng-click="ShowSelectFilter(2,'{{page}}')" style="background-color: transparent;border-style: none;">
+                                                            <img src="images/zoom.png" class="imgBtn labelLinkBtnWithImg" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tblFilter" style="width:33.33%;">
+                                    <div class="ui-block-c selectFilter" style="width:100%;">
+                                        <div class="ui-bar ui-bar-b selectFilter pageMenuHeader">
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%" style="margin: -7px 0px 0px 0px;padding: 0px;">
+                                                <tr>
+                                                    <td width="5%">&nbsp;</td>
+                                                    <td width="85%">
+                                                        <label style="margin-top: 4px;"><strong>{{GetStageName(3)}}</strong></label>
+                                                    </td>
+                                                    <td width="10%" align="right" style="width:40px;height:40px;">
+                                                        <a ng-href="#" ng-show="showTotalStage(3)" ng-click="ShowSelectFilter(3,'{{page}}')" style="background-color: transparent;border-style: none;">
+                                                            <img src="images/zoom.png" class="imgBtn labelLinkBtnWithImg" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </fieldset>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>
+                            <span>{{ "Filter" | translate }}</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-a" style="width:100%;">
+                                            <label id="lblFilter1{{page}}" style="margin-left: 0px; margin-top: 4px;">{{Solution.filters[0].filter.filterName}}</label>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-b" style="width:100%;">
+                                            <label id="lblFilter2{{page}}" style="margin-left: 0px; margin-top: 4px;">{{Solution.filters[1].filter.filterName}}</label>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-c" style="width:100%;">
+                                            <label id="lblFilter3{{page}}" style="margin-left: 0px; margin-top: 4px;">{{Solution.filters[2].filter.filterName}}</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="divFilterErrMessage{{page}}" style="display: none;color:red;">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>
+                            <span>{{ "Error Message" | translate }}</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter"  style="width:33.33%;">
+                                        <div class="ui-block-a" style="width:100%;" >
+                                            <label id="lblFilter1ErrMsg{{page}}" style="margin-left: 0px; margin-top: 4px;" ng-model="errMsg[0]"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-b" style="width:100%;">
+                                            <label id="lblFilter2ErrMsg{{page}}" style="margin-left: 0px; margin-top: 4px;" ng-model="errMsg[1]"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-c" style="width:100%;">
+                                            <label id="lblFilter3ErrMsg{{page}}" style="margin-left: 0px; margin-top: 4px;" ng-model="errMsg[2]"></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="divClearFilter{{page}}">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>
+                            <span>&nbsp;</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div id="divClearFilter1" class="ui-block-a rowWithButton" style="width:100%;">
+                                            <center><a id="ancClearFilter1{{page}}" ng-href="#" ng-show="showTotalStage(1)" ng-click="ClearFilter(1,'{{page}}')" class="roundButton ui-link ui-btn ui-icon-delete ui-btn-icon-left ui-shadow ui-corner-all ui-first-child">{{ "Remove" | translate }}</a></center>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div id="divClearFilter1" class="ui-block-b rowWithButton" style="width:100%;">
+                                            <center><a id="ancClearFilter2{{page}}" ng-href="#" ng-show="showTotalStage(2)" ng-click="ClearFilter(2,'{{page}}')" class="roundButton ui-link ui-btn ui-icon-delete ui-btn-icon-left ui-shadow ui-corner-all ui-first-child">{{ "Remove" | translate }}</a></center>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div id="divClearFilter1" class="ui-block-c rowWithButton" style="width:100%;">
+                                            <center><a id="ancClearFilter3{{page}}" ng-href="#" ng-show="showTotalStage(3)" ng-click="ClearFilter(3,'{{page}}')" class="roundButton ui-link ui-btn ui-icon-delete ui-btn-icon-left ui-shadow ui-corner-all ui-first-child">{{ "Remove" | translate }}</a></center>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" ng-show="Solution.filterLifetimeCriteria=='FINALDP'">
+                    <fieldset data-role="controlgroup" data-type="horizontal" class="rowWithGrayBackground">
+                        <legend>
+                            <span>{{ "Exchange interval" | translate }} [{{Setting.unit.pressureDrop}}] </span><span id="lblFinalDPMandatoryIndicator{{page}}" style="color:red;font-weight:bold;display:inline;visibility: visible;font-size: medium;">*</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-a inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                <div style="display:none;">
+                                                    <input id="cboFinalDP1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].exchangeValue" />
+                                                </div>
+                                                <select id="cboFinalDP1{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.RunningCond.List.FinalPressureDrop" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-b inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                <div style="display:none;">
+                                                    <input id="cboFinalDP2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].exchangeValue" />
+                                                </div>
+                                                <select id="cboFinalDP2{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.RunningCond.List.FinalPressureDrop" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-c inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                <div style="display:none;">
+                                                    <input id="cboFinalDP3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].exchangeValue" />
+                                                </div>
+                                                <select id="cboFinalDP3{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.RunningCond.List.FinalPressureDrop" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" ng-show="Solution.filterLifetimeCriteria=='TIME'">
+                    <fieldset data-role="controlgroup" data-type="horizontal" class="rowWithGrayBackground">
+                        <legend>
+                            <span>{{ "Exchange interval" | translate }} [{{ "hours" | translate }}]</span><span id="lblTimeMandatoryIndicator{{page}}" style="color:red;font-weight:bold;display:inline;visibility: visible;font-size: medium;">*</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-a inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                <div style="display:none;">
+                                                    <input id="cboTime1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].exchangeValue" />
+                                                </div>
+                                                <select id="cboTime1{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.RunningCond.List.Time" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-b inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                <div style="display:none;">
+                                                    <input id="cboTime2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].exchangeValue" />
+                                                </div>
+                                                <select id="cboTime2{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.RunningCond.List.Time" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-c inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                <div style="display:none;">
+                                                    <input id="cboTime3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].exchangeValue" />
+                                                </div>
+                                                <select id="cboTime3{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.RunningCond.List.Time" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal" class="rowWithGrayBackground">
+                        <legend>
+                            <span>{{ "No of filter" | translate }} </span><span id="lblNoOfFilterMandatoryIndicator{{page}}" style="color:red;font-weight:bold;display:inline;visibility: visible;font-size: medium;">*</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-a inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                <div style="display:none;">
+                                                    <input id="cboNoOfFilter1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].noOfFilter" />
+                                                </div>
+                                                <select id="cboNoOfFilter1{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.SolutionToCompare.List.NoOfFilter" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-b inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                <div style="display:none;">
+                                                    <input id="cboNoOfFilter2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].noOfFilter" />
+                                                </div>
+                                                <select id="cboNoOfFilter2{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.SolutionToCompare.List.NoOfFilter" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-c inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                <div style="display:none;">
+                                                    <input id="cboNoOfFilter3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].noOfFilter" />
+                                                </div>
+                                                <select id="cboNoOfFilter3{{page}}" data-mini="true" class="isNumeric">
+                                                    <option ng-repeat="item in dataEntries.SolutionToCompare.List.NoOfFilter" value="{{item}}">{{item | number}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>
+                            <span>{{ "Price" | translate }} / {{ "Filter" | translate }} [$] </span><span id="lblFilterPriceMandatoryIndicator{{page}}" style="color:red;font-weight:bold;display:inline;visibility: visible;font-size: medium;">*</span>
+                        </legend>
+                        <div>
+                            <table style="width:111%;max-width:111%">
+                                <tr>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-a inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                <div style="display:none;">
+                                                    <input id="txtFilter1Price{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].price" />
+                                                </div>
+                                                <select id="txtFilter1Price{{page}}" data-mini="true" class="isNumeric"></select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-b inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                <div style="display:none;">
+                                                    <input id="txtFilter2Price{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].price" />
+                                                </div>
+                                                <select id="txtFilter2Price{{page}}" data-mini="true" class="isNumeric"></select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tblFilter" style="width:33.33%;">
+                                        <div class="ui-block-c inputBox" style="width:100%;">
+                                            <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                <div style="display:none;">
+                                                    <input id="txtFilter3Price{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].price" />
+                                                </div>
+                                                <select id="txtFilter3Price{{page}}" data-mini="true" class="isNumeric"></select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <page-section-title-with-switch title="Costs" theme="{{costTheme}}" status="{{costStatus}}" model="switch" default-status="off" button-on-click="ShowCostEntries()"></page-section-title-with-switch>
+                <div class="ui-field-contain ng-hide" id="divCost{{page}}">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                <span>{{ "Housing" | translate }} [$]</span>
+                            </legend>
+                            <div>
+                                <table style="width:111%;max-width:111%">
+                                    <tr>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-a inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                    <div style="display:none;">
+                                                        <input id="cboHousingCost1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].costs.housing" />
+                                                    </div>
+                                                    <select id="cboHousingCost1{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.HousingCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-b inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                    <div style="display:none;">
+                                                        <input id="cboHousingCost2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].costs.housing" />
+                                                    </div>
+                                                    <select id="cboHousingCost2{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.HousingCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-c inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                    <div style="display:none;">
+                                                        <input id="cboHousingCost3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].costs.housing" />
+                                                    </div>
+                                                    <select id="cboHousingCost3{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.HousingCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain" class="rowWithGrayBackground">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                <span>{{ "Labor" | translate }} [$/{{"exchange" | translate }}]</span>
+                            </legend>
+                            <div>
+                                <table style="width:111%;max-width:111%">
+                                    <tr>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-a inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                    <div style="display:none;">
+                                                        <input id="cboLaborCost1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].costs.labor" />
+                                                    </div>
+                                                    <select id="cboLaborCost1{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.LaborCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-b inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                    <div style="display:none;">
+                                                        <input id="cboLaborCost2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].costs.labor" />
+                                                    </div>
+                                                    <select id="cboLaborCost2{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.LaborCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-c inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                    <div style="display:none;">
+                                                        <input id="cboLaborCost3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].costs.labor" />
+                                                    </div>
+                                                    <select id="cboLaborCost3{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.LaborCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                <span>{{ "Waste handling" | translate }} [$/{{"exchange" | translate }}]</span>
+                            </legend>
+                            <div>
+                                <table style="width:111%;max-width:111%">
+                                    <tr>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-a inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                                    <div style="display:none;">
+                                                        <input id="cboWasteHandlingCost1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].costs.wasteHandling" />
+                                                    </div>
+                                                    <select id="cboWasteHandlingCost1{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.WasteHandlingCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-b inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                                    <div style="display:none;">
+                                                        <input id="cboWasteHandlingCost2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].costs.wasteHandling" />
+                                                    </div>
+                                                    <select id="cboWasteHandlingCost2{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.WasteHandlingCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tblFilter" style="width:33.33%;">
+                                            <div class="ui-block-c inputBox" style="width:100%;">
+                                                <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                                    <div style="display:none;">
+                                                        <input id="cboWasteHandlingCost3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].costs.wasteHandling" />
+                                                    </div>
+                                                    <select id="cboWasteHandlingCost3{{page}}" data-mini="true" class="isNumeric">
+                                                        <option ng-repeat="item in dataEntries.CostsRates.List.WasteHandlingCost" value="{{item}}">{{item | number}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--<div data-role="fieldcontain" class="rowWithGrayBackground">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                <span>{{ "Water wash" | translate }} [$/{{"wash" | translate }}]</span>
+                            </legend>
+                            <div>
+                                <div class="ui-block-a inputBox">
+                                    <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                        <div style="display:none;">
+                                            <input id="cboWaterWashCost1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].costs.waterWash" />
+                                        </div>
+                                        <select id="cboWaterWashCost1{{page}}" data-mini="true" class="isNumeric">
+                                            <option ng-repeat="item in dataEntries.CostsRates.List.WaterWashCost" value="{{item}}">{{item | number}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ui-block-b inputBox">
+                                    <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                        <div style="display:none;">
+                                            <input id="cboWaterWashCost2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].costs.waterWash" />
+                                        </div>
+                                        <select id="cboWaterWashCost2{{page}}" data-mini="true" class="isNumeric">
+                                            <option ng-repeat="item in dataEntries.CostsRates.List.WaterWashCost" value="{{item}}">{{item | number}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ui-block-c inputBox">
+                                    <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                        <div style="display:none;">
+                                            <input id="cboWaterWashCost3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].costs.waterWash" />
+                                        </div>
+                                        <select id="cboWaterWashCost3{{page}}" data-mini="true" class="isNumeric">
+                                            <option ng-repeat="item in dataEntries.CostsRates.List.WaterWashCost" value="{{item}}">{{item | number}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>-->
+                    <!--<div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                <span>{{ "Major maintenance" | translate }} [$/{{"maintenance" | translate }}]</span>
+                            </legend>
+                            <div>
+                                <div class="ui-block-a inputBox">
+                                    <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(1)">
+                                        <div style="display:none;">
+                                            <input id="cboMajorMaintenanceCost1{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[0].costs.majorMaintenance" />
+                                        </div>
+                                        <select id="cboMajorMaintenanceCost1{{page}}" data-mini="true" class="isNumeric">
+                                            <option ng-repeat="item in dataEntries.CostsRates.List.MajorMaintenanceCost" value="{{item}}">{{item | number}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ui-block-b inputBox">
+                                    <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(2)">
+                                        <div style="display:none;">
+                                            <input id="cboMajorMaintenanceCost2{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[1].costs.majorMaintenance" />
+                                        </div>
+                                        <select id="cboMajorMaintenanceCost2{{page}}" data-mini="true" class="isNumeric">
+                                            <option ng-repeat="item in dataEntries.CostsRates.List.MajorMaintenanceCost" value="{{item}}">{{item | number}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ui-block-c inputBox">
+                                    <div class="ui-field-contain smallComboBoxInGrid" ng-show="showTotalStage(3)">
+                                        <div style="display:none;">
+                                            <input id="cboMajorMaintenanceCost3{{page}}Value" type="number" data-mini="true" ng-model="Solution.filters[2].costs.majorMaintenance" />
+                                        </div>
+                                        <select id="cboMajorMaintenanceCost3{{page}}" data-mini="true" class="isNumeric">
+                                            <option ng-repeat="item in dataEntries.CostsRates.List.MajorMaintenanceCost" value="{{item}}">{{item | number}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>-->
+                </div>
+                <div data-role="fieldcontain">
+                    <table width="100%" style="margin-top: 2%;">
+                        <tr>
+                            <td>
+                                <h4 style="margin: 0px;">{{"System configuration" | translate}}</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr style="margin: 0px;border-color: #333;border-width: 2px;" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <table width="100%">
+                <tr>
+                    <td width="47%">
+                        <div class="ui-field-contain inputTopLabel smallComboBox">
+                            <label class="inputTopLabel" for="cboWaterWashInterval{{page}}">{{ "Water wash Interval [months]" | translate }}</label>
+                            <div style="display:none;">
+                                <input id="cboWaterWashInterval{{page}}Value" type="text" data-mini="true" ng-model="Solution.waterWashInterval" />
+                            </div>
+                            <select id="cboWaterWashInterval{{page}}" data-mini="true" class="isNumeric">
+                                <option ng-repeat="item in dataEntries.GasTurbine.List.CompressorInterval" value="{{item}}">{{item | number}}</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td width="6%"></td>
+                    <td width="47%">
+                        <!--<div class="ui-field-contain inputTopLabel smallComboBox">
+                                <label class="inputTopLabel" for="cboFouledCompressorInterval{{page}}">{{ "Fouled Compressor Interval [months]" | translate }}</label>
+                                <div style="display:none;">
+                                    <input id="cboFouledCompressorInterval{{page}}Value" type="text" data-mini="true" ng-model="Solution.fouledCompressorInterval" />
+                                </div>
+                                <select id="cboFouledCompressorInterval{{page}}" data-mini="true" class="isNumeric">
+                                    <option ng-repeat="item in dataEntries.GasTurbine.List.CompressorInterval" value="{{item}}">{{item | number}}</option>
+                                </select>
+                            </div>-->
+                  
+                    </td>
+               </tr>
+                <tr><td colspan="3"><br/></td></tr>
+                <!--<tr>
+                    <td width="47%">
+                        <div class="ui-field-contain inputTopLabel smallComboBox">
+                            <label for="cboMajorMaintenanceInterval">{{ "Major maintenance interval [months], for ignoring some downtime" | translate }}</label>
+                            <div style="display:none;">
+                                <input id="cboMajorMaintenanceInterval{{page}}Value" type="text" data-mini="true" ng-model="Solution.majorMaintenanceInterval" />
+                            </div>
+                            <select id="cboMajorMaintenanceInterval{{page}}" data-mini="true" class="isNumeric">
+                                <option ng-repeat="item in dataEntries.GasTurbine.List.CompressorInterval" value="{{item}}">{{item | number}}</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td width="6%"></td>
+                    <td width="47%"></td>
+                </tr>-->
+           </table>
+        </div>
+    </div>
+    <popup-filter-list></popup-filter-list>
+</div>

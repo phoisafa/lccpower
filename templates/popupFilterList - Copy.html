@@ -1,0 +1,155 @@
+﻿<div data-role="popup" id="popupFilterList{{page}}" data-theme="b" class="ui-corner-all" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width: 600px; max-width: 600px;">
+    <form name="formFilterList">
+        <div role="banner" class="ui-header ui-bar-f" data-theme="f">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 25%;">
+                        <div style="margin-left: 10px;">
+                            <!--<input type="button" data-icon="delete" data-iconpos="notext" data-theme="d" value="Cancel" ng-click="CancelSelectFilter()"></input>-->
+                            <a ng-href="#" ng-click="CancelSelectFilter()"><img ng-src="images/delete.png" class="imgBtn" style="width: 24px; height: 24px;" /></a>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        <h1 aria-level="1" role="heading" class="ui-title">
+                            {{ "Select Filter" | translate }}
+                        </h1>
+                    </td>
+                    <td style="width: 25%; text-align: right;">
+                        <div style="margin-right: 10px;">
+                            <a ng-href="#" ng-click="OKSelectFilter()"><img ng-src="images/check.png" class="imgBtn" style="width: 24px; height: 24px;" /></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div role="banner" class="ui-header ui-bar-g" data-theme="g">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 10%;">
+                        <div style="margin-left: 10px;">
+                            <a id="backButtonFilter" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-back ui-btn-icon-notext ui-btn-d" ng-show="{{ShowBackButton}}" ng-click="SelectFilterGoBack()">Back</a>
+                        </div>
+                    </td>
+                    <td style="width: 80%;">
+                        <h1 aria-level="1" role="heading" class="ui-title">
+                            {{registeredStageName | translate }}
+                        </h1>
+                    </td>
+                    <td style="width: 10%; text-align: right;">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div data-role="tabs" id="tabFilterSelection" style=" width: 100%;padding: 5px !important;">
+            <div data-role="navbar" style="width: 99.3%;">
+                <ul>
+                    <li><a href="#Filter" id="tabFilter" data-ajax="false" class="ui-btn-active">{{ "All Filters" | translate }}</a></li>
+                    <li><a href="#Grouping" id="tabFilterGrouping" data-ajax="false">{{ "Grouping" | translate }}</a></li>
+                </ul>
+            </div>
+            <div id="Grouping" class="ui-body-d ui-content" style="padding:1px;">
+                <div role="main" class="ui-content" style="height: 450px; overflow: auto;padding-top:0px;">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="" ng-focus="" ng-blur="" data-inset="false" id="ulFilterList" data-theme="c">
+                        <li ng-repeat="filterInfo in filterGroup | orderBy:['name']" ng-click="SelectFilter(filterInfo.value)" ng-switch on="filterInfo.category">
+                            <a id="{{filterInfo.value}}" ng-href="#" data-ajax="false" ng-switch-when="Folder">
+                                {{filterInfo.name}}
+                                <span class="ui-li-count">{{filterInfo.totalChild}}</span>
+                            </a>
+                            <a id="{{filterInfo.value}}" ng-href="#" data-ajax="false" ng-switch-when="Filter">
+                                <img ng-src="https://cfss.camfil.net/cfss2/picture/{{filterInfo.Picture}}" />
+                                <h3>{{filterInfo.name}}</h3>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;" ng-switch on="Setting.unit.unit">
+                                    <span ng-show="Setting.unit.unit=='SI'">
+                                        {{filterInfo.Width | number }} X {{filterInfo.Height | number }} X {{filterInfo.Depth | number }} {{Setting.unit.dimension}}
+                                    </span>
+                                    <span ng-show="Setting.unit.unit=='US'">
+                                        {{filterInfo.WidthUS | number }} X {{filterInfo.HeightUS | number }} X {{filterInfo.DepthUS | number }} {{Setting.unit.dimension}}
+                                    </span>
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        {{ "Type" | translate }}:&nbsp;
+                                    </strong>
+                                    {{filterInfo.Manufacturer}}, {{filterInfo.Type}}
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;" ng-show="filterInfo.FilterClass !=''">
+                                    <strong>
+                                        {{ "Class" | translate }}:&nbsp;
+                                    </strong>
+                                    <span ng-show="Setting.unit.unit=='SI'">
+                                        {{filterInfo.FilterClass}}
+                                    </span>
+                                    <span ng-show="Setting.unit.unit=='US'">
+                                        {{filterInfo.FilterClassUS}}
+                                    </span>
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;" ng-show="filterInfo.MediaSurface > 0">
+                                    <strong>
+                                        {{ "Media Surface" | translate }}:&nbsp;
+                                    </strong>
+                                    <span ng-show="Setting.unit.unit=='SI'">
+                                        {{filterInfo.MediaSurface | number }} {{Setting.unit.media}}
+                                    </span>
+                                    <span ng-show="Setting.unit.unit=='US'">
+                                        {{filterInfo.MediaSurfaceUS | number }} {{Setting.unit.media}}
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Filter" class="ui-body-d ui-content" style="padding:1px;">
+                <div role="main" class="ui-content" style="height: 450px; overflow: auto;padding-top:0px;">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="" ng-focus="" ng-blur="" data-inset="false" id="ulFilterList2" data-theme="c">
+                        <li ng-repeat="filterInfo in allFilter | orderBy:['name']" ng-click="SelectFilter(filterInfo.value)" ng-switch on="filterInfo.category">
+                            <a id="{{filterInfo.value}}" ng-href="#" data-ajax="false" ng-switch-when="Filter">
+                                <img ng-src="https://cfss.camfil.net/cfss2/picture/{{filterInfo.Picture}}" />
+                                <h3>{{filterInfo.name}}</h3>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <span ng-show="Setting.unit.unit=='SI'">
+                                        {{filterInfo.Width | number }} X {{filterInfo.Height | number }} X {{filterInfo.Depth | number }} {{Setting.unit.dimension}}
+                                    </span>
+                                    <span ng-show="Setting.unit.unit=='US'">
+                                        {{filterInfo.WidthUS | number }} X {{filterInfo.HeightUS | number }} X {{filterInfo.DepthUS | number }} {{Setting.unit.dimension}}
+                                    </span>
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        {{ "Type" | translate }}:&nbsp;
+                                    </strong>
+                                    {{filterInfo.Manufacturer}}, {{filterInfo.Type}}
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;" ng-show="filterInfo.FilterClass !=''">
+                                    <strong>
+                                        {{ "Class" | translate }}:&nbsp;
+                                    </strong>
+                                    <span ng-show="Setting.unit.unit=='SI'">
+                                        {{filterInfo.FilterClass}}
+                                    </span>
+                                    <span ng-show="Setting.unit.unit=='US'">
+                                        {{filterInfo.FilterClassUS}}
+                                    </span>
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;" ng-show="filterInfo.MediaSurface > 0">
+                                    <strong>
+                                        {{ "Media Surface" | translate }}:&nbsp;
+                                    </strong>
+                                    <span ng-show="Setting.unit.unit=='SI'">
+                                        {{filterInfo.MediaSurface | number }} {{Setting.unit.media}}
+                                    </span>
+                                    <span ng-show="Setting.unit.unit=='US'">
+                                        {{filterInfo.MediaSurfaceUS | number }} {{Setting.unit.media}}
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+

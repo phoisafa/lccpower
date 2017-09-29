@@ -1,0 +1,23 @@
+﻿<div>
+    <div class="Div-Empty" ng-show="{{addSpace}}">&nbsp;</div>
+    <div role="banner" class="ui-header ui-bar-{{theme}}" data-theme="{{theme}}">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 10%;">
+                &nbsp;
+            </td>
+            <td style="width: 80%;">
+                <h1 aria-level="1" role="heading" class="ui-title">
+                    {{ title  }}
+                </h1>
+            </td>
+            <td style="width: 10%; text-align: right;">
+                <a ng-show="{{showButton}}" ng-href="{{buttonHref}}" ng-click="buttonOnClick()">
+                    <img  ng-src="images/{{buttonStyle}}" class="imgBtn" style="width: 30px; height: 30px; margin-right:10px"  title="{{ buttonDesc  }}"/>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</div>

@@ -1,0 +1,25 @@
+﻿<div id="{{pageId}}" role="banner" class="ui-header ui-bar-b pageMenuHeader" data-theme="b">
+    <!--class="ui-header ui-bar-b"-->
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 20%;">
+                <div class="smallRadioButton" ng-show="{{showRadioButton}}" ng-controller="UnitMeasurementCtrl">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <input id="rdbSI{{pageId}}" type="radio" name="unit{{pageId}}" value="1" data-theme="d" ng-checked="Setting.unit.unitId==1" checked="checked" ng-click="ChangeUnitMeasurement(1,'{{pageId}}',true,false)"  />
+                        <label id="lblrdbSI{{pageId}}" for="rdbSI{{pageId}}" data-mini="true">SI</label>
+                        <input id="rdbUS{{pageId}}" type="radio" name="unit{{pageId}}" value="2" data-theme="d" ng-checked="Setting.unit.unitId==2" ng-click="ChangeUnitMeasurement(2,'{{pageId}}',true,false)"  /><!--ChangeUnitMeasurement(2,'{{pageId}}',true,false)-->
+                        <label id="lblrdbUS{{pageId}}" for="rdbUS{{pageId}}" data-mini="true">US</label>
+                    </fieldset>
+                </div>
+            </td>
+            <td style="width: 70%;">
+                <h1 aria-level="1" role="heading" class="ui-title" style="margin-left:20%;">
+                    {{title }}
+                </h1>
+            </td>
+            <td style="width: 10%; text-align: right;">
+                <a ng-show="showAddButton" ng-href="{{addButtonHref}}" ng-click="buttonOnClick()"><img ng-src="images/{{icon}}" class="imgBtn" style="width: 30px;height: 30px;margin-right:10px;" title="{{iconDesc}}" /></a>
+            </td>
+        </tr>
+    </table>
+</div>

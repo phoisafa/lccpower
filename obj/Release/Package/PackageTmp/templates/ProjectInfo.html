@@ -1,0 +1,234 @@
+﻿<div class="divColContent" role="main" style="margin-top:18px;" id="divProjectInfoTemplate">
+<page-section-title title="Customer Info" theme="f" show-button="false" button-href="" button-on-click="" button-style="" add-space="false"></page-section-title>
+<div class="ui-body-d Div-Content1">
+    <div class="Div-Content2">
+        <div class="ui-field-contain">
+            <label for="txtCustCompanyName">{{ "Company Name" | translate }}</label>
+            <div id="divCustCompanyName" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustCompanyName" type="text" data-mini="true" ng-model="Project.Customer.Name" ng-focus="focusEvent('divCustCompanyName',true)" ng-blur="focusEvent('divCustCompanyName',false)" /> 
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustContactPerson">{{ "Contact" | translate }}</label>
+            <div id="divCustContactPerson" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustContactPerson" type="text" data-mini="true" ng-model="Project.Customer.Contact" ng-focus="focusEvent('divCustContactPerson',true)" ng-blur="focusEvent('divCustContactPerson',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustContactPersonTitle">{{ "Contact Designation / Title" | translate }}</label>
+            <div id="divCustContactPersonTitle" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustContactPersonTitle" type="text" data-mini="true" ng-model="Project.Customer.ContactTitle" ng-focus="focusEvent('divCustContactPersonTitle',true)" ng-blur="focusEvent('divCustContactPersonTitle',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustStreet">{{ "Street" | translate }}</label>
+            <div id="divCustStreet" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustStreet" type="text" data-mini="true" ng-model="Project.Customer.Street" ng-focus="focusEvent('divCustStreet',true)" ng-blur="focusEvent('divCustStreet',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustCity">{{ "City" | translate }}</label>
+            <div id="divCustCity" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustCity" type="text" data-mini="true" ng-model="Project.Customer.City" ng-focus="focusEvent('divCustCity',true)" ng-blur="focusEvent('divCustCity',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustState">{{ "State" | translate }}</label>
+            <div id="divCustState" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustState" type="text" data-mini="true" ng-model="Project.Customer.State" ng-focus="focusEvent('divCustState',true)" ng-blur="focusEvent('divCustState',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustZip">{{ "Zip / Postal Code" | translate }}</label>
+            <div id="divCustZip" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustZip" type="text" data-mini="true" ng-model="Project.Customer.Zip" ng-focus="focusEvent('divCustZip',true)" ng-blur="focusEvent('divCustZip',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustCountry">{{ "Country" | translate }}</label>
+            <div id="divCustCountry" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustCountry" type="text" data-mini="true" ng-model="Project.Customer.Country" ng-focus="focusEvent('divCustCountry',true)" ng-blur="focusEvent('divCustCountry',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustContactPersonPhone">{{ "Contact Phone no" | translate }}</label>
+            <div id="divCustContactPersonPhone" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustContactPersonPhone" type="tel" data-mini="true" ng-model="Project.Customer.ContactPhone" ng-focus="focusEvent('divCustContactPersonPhone',true)" ng-blur="focusEvent('divCustContactPersonPhone',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustContactPersonEmail">{{ "Contact Email" | translate }}</label>
+            <div id="divCustContactPersonEmail" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustContactPersonEmail" type="email" data-mini="true" ng-model="Project.Customer.ContactEmail" ng-focus="focusEvent('divCustContactPersonEmail',true)" ng-blur="focusEvent('divCustContactPersonEmail',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustSite">{{ "Site" | translate }}</label>
+            <div id="divCustSite" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustSite" type="text" data-mini="true" ng-model="Project.Site.Site" ng-focus="focusEvent('divCustSite',true)" ng-blur="focusEvent('divCustSite',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustLocation">{{ "Location" | translate }}</label>
+            <div id="divCustLocation" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustLocation" type="text" data-mini="true" ng-model="Project.Site.Location" ng-focus="focusEvent('divCustLocation',true)" ng-blur="focusEvent('divCustLocation',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustBuilding">{{ "Building" | translate }}</label>
+            <div id="divCustBuilding" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustBuilding" type="text" data-mini="true" ng-model="Project.Site.Building" ng-focus="focusEvent('divCustBuilding',true)" ng-blur="focusEvent('divCustBuilding',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCustAhu">{{ "AHU" | translate }}</label>
+            <div id="divCustAhu" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCustAhu" type="text" data-mini="true" ng-model="Project.Site.Ahu" ng-focus="focusEvent('divCustLocation',true)" ng-blur="focusEvent('divCustLocation',false)" />
+            </div>
+        </div>
+    </div>
+</div>
+<page-section-title title="Camfil Authorised Distributor" theme="f" show-button="true" button-href="" button-on-click="RefreshCamfilRepInfo()"  button-style="playback_reload.png" add-space="true" button-desc="RELOAD_ACCOUNT_INFO"></page-section-title>
+<div class="ui-body-d Div-Content1">
+    <div class="Div-Content2">
+        <div class="ui-field-contain" ng-show="CompanyLogo!=''">
+            <table style="width:80%;">
+                <tr>
+                    <td align="center" colspan="2">
+                        <img id="imgProjectInfoCompanyLogo" ng-src="{{CompanyLogo}}" alt="#" style="width: 150px;float: left;margin-left: 25%;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table style="width:40%;margin-left: -10%;">
+                            <tr>
+                                <td>
+                                    <a href="#" style="width: 100px;height: 25px;font-size: 11px;" data-role="button" data-theme="d" ng-click="ChangeLogo();">{{ "Change logo" | translate }}</a>
+                                </td>
+                                <td>
+                                    <a href="#" style="width: 100px;height: 25px;font-size: 11px;" data-role="button" data-theme="d" ng-click="RemoveLogo();">{{ "Remove logo" | translate }}</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table style="width:100%;">
+                            <tr>
+                                <td colspan="2">
+                                    <span style="color:red;font-size:10px;font-style:italic;margin-left:25%;">{{ "* Only file with jpg, jpeg and png file type are allowed." | translate }}</span><br />
+                                    <span style="color:red;font-size:10px;font-style:italic;margin-left:25%;">{{ "  Recommended picture size-width:110 pixels height:35 pixels" | translate }}</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div ng-show="CompanyLogo==''">
+            <table style="width:80%;">
+                <tr>
+                    <td align="center" colspan="2">
+                        <img id="imgProjectInfoCompanyLogo2" ng-src="images/PNGCamfilwhite.png" alt="#" style="width: 350px;float: left;margin-left: 25%;background-color:#00673e;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="width:100%;">
+                            <tr>
+                                <td>
+                                    <a href="#" style="width: 100px;height: 25px;font-size: 11px;margin-left: 25%;" data-role="button" data-theme="d" ng-click="ChangeLogo();">{{ "Upload logo" | translate }}</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span style="color:red;font-size:10px;font-style:italic;margin-left:25%;">{{ "* Only file with jpg, jpeg and png file type are allowed." | translate }}</span>
+                                    <span style="color:red;font-size:10px;font-style:italic;margin-left:2px;">{{ "  Recommended picture size-width:110 pixels height:35 pixels" | translate }}</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtReps">{{ "Rep / Dist / RSM" | translate }}</label>
+            <div id="divReps" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtReps" type="text" data-mini="true" ng-model="Project.Rep.Name" ng-focus="focusEvent('divReps',true)" ng-blur="focusEvent('divReps',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtStreet">{{ "Street" | translate }}</label>
+            <div id="divStreet" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtStreet" type="text" data-mini="true" ng-model="Project.Rep.Street" ng-focus="focusEvent('divStreet',true)" ng-blur="focusEvent('divStreet',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCity">{{ "City" | translate }}</label>
+            <div id="divCity" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCity" type="text" data-mini="true" ng-model="Project.Rep.City" ng-focus="focusEvent('divCity',true)" ng-blur="focusEvent('divCity',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtState">{{ "State" | translate }}</label>
+            <div  id="divState" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtState" type="text" data-mini="true" ng-model="Project.Rep.State" ng-focus="focusEvent('divState',true)" ng-blur="focusEvent('divState',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtZip">{{ "Zip / Postal Code" | translate }}</label>
+            <div id="divZip" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                 <input id="txtZip" type="text" data-mini="true" ng-model="Project.Rep.Zip" ng-focus="focusEvent('divZip',true)" ng-blur="focusEvent('divZip',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtCountry">{{ "Country" | translate }}</label>
+            <div id="divCountry" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtCountry" type="text" data-mini="true" ng-model="Project.Rep.Country" ng-focus="focusEvent('divCountry',true)" ng-blur="focusEvent('divCountry',false)" />
+            </div>
+        </div>
+    </div>
+</div>
+<page-section-title title="Prepared By" theme="g" show-button="false" button-href="" button-on-click="" button-style="plus"></page-section-title>
+<div class="ui-body-d Div-Content1">
+    <div class="Div-Content2">
+        <div class="ui-field-contain">
+            <label for="txtName">{{ "Name" | translate }}</label>
+            <div id="divName" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtName" type="text" data-mini="true" ng-model="Project.PrepareBy.Name" ng-focus="focusEvent('divName',true)" ng-blur="focusEvent('divName',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtDesignation">{{ "Designation / Title" | translate }}</label>
+            <div id="divDesignation" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtDesignation" type="text" data-mini="true" ng-model="Project.PrepareBy.Title" ng-focus="focusEvent('divDesignation',true)" ng-blur="focusEvent('divDesignation',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtTel">{{ "Telephone no" | translate }}</label>
+            <div id="divTel" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtTel" type="tel" data-mini="true" ng-model="Project.PrepareBy.Tel" ng-focus="focusEvent('divTel',true)" ng-blur="focusEvent('divTel',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtFax" id="lblFax">{{ "Fax no" | translate }}</label>
+            <div id="divFax" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtFax" type="tel" data-mini="true" ng-model="Project.PrepareBy.Fax" ng-focus="focusEvent('divFax',true)" ng-blur="focusEvent('divFax',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtMobile">{{ "Mobile no" | translate }}</label>
+            <div id="divMobile" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtMobile" type="tel" data-mini="true" ng-model="Project.PrepareBy.Mobile" ng-focus="focusEvent('divMobile',true)" ng-blur="focusEvent('divMobile',false)" />
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <label for="txtEmail">{{ "Email" | translate }}</label>
+            <div id="divEmail" class="ui-input-text ui-body-inherit ui-corner-all ui-mini ui-shadow-inset">
+                <input id="txtEmail" type="email" data-mini="true" ng-model="Project.PrepareBy.Email" ng-focus="focusEvent('divEmail',true)" ng-blur="focusEvent('divEmail',false)" />
+            </div>
+        </div>
+    </div>
+</div>
+</div>

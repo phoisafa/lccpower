@@ -1,0 +1,20 @@
+﻿<div id="{{page}}">
+    <div class="Div-Empty" ng-show="{{addSpace}}">&nbsp;</div>
+    <div role="banner" class="ui-header ui-bar-{{theme}}" data-theme="{{theme}}" style="border-style:none;border-width:0px;background-color:{{bgcolor}};">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 10%;">
+                    &nbsp;
+                </td>
+                <td style="width: 80%;">
+                    <h1 aria-level="1" role="heading" class="ui-title" style="padding: 5px 0px 5px 0px;width: 100%;text-align: middle;margin: 0px;">
+                        {{title}} <span style="color:#00eeee;"><span id="lblAirFlow{{page}}">{{airflow | number }}</span> {{airflowunit}}</span>
+                    </h1>
+                </td>
+                <td style="width: 10%; text-align: right;">
+                    <a ng-show="{{showButton}}" ng-href="{{buttonHref}}" ng-click="buttonOnClick()"><img ng-src="images/{{buttonStyle}}" class="imgBtn" style="width: 30px;height: 30px;margin-right:10px;" /></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

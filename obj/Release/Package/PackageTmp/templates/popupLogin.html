@@ -1,0 +1,23 @@
+﻿<div id="popupLogin" data-theme="b" class="ui-corner-all" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width: 350px; max-width: 350px;">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <form name="formLogin">
+        <div role="banner" class="ui-header ui-bar-f" data-theme="f">
+            <h1 aria-level="1" role="heading" class="ui-title">
+                Sign in
+            </h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="ui-field-contain">
+                <label for="txtEmailID">Email ID</label>
+                <input id="txtEmailID" type="text" data-mini="true" data-theme="d" placeholder="id@camfil.com" required ng-model="login.emailID" />
+            </div>
+            <div class="ui-field-contain">
+                <label for="txtPassword">Password</label>
+                <input id="txtPassword" type="password" data-mini="true" data-theme="d" required ng-model="login.password" />
+            </div>
+            <button type="submit" data-icon="sign-in" data-theme="d" value="Sign in" ng-click="SignIn(formLogin.$valid, $event)" >
+                Sign in
+            </button>        
+        </div>
+    </form>
+</div>

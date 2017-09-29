@@ -1,0 +1,25 @@
+﻿<div id="pnlOptions" data-role="panel" data-position-fixed="true" data-position="left" data-display="overlay" data-theme="f">
+    <ul data-role="listview" id="ulPanelOptions">
+        <li data-role="list-divider" style="background-color:#333;">
+            <span>&nbsp;</span>
+            <img src="images/PNGCamfilwhite.png" style="width: 75px;height: 20px;" />
+        </li>
+        <li data-theme="a">
+            <a href="#" ng-click="ShowSignInDialog()" data-rel="close">{{LoginName}}</a>
+            <a href="#" data-rel="close" data-icon="delete">Close Menu</a>
+        </li>
+<!--        <li data-role="list-divider">Your Project</li>-->
+        <li data-icon=""><a href="#" data-rel="close" ng-click="NewProject()">{{ "New" | translate }}</a></li>
+        <li data-role="list-divider" >Records</li>
+        <li><a href="#" ng-click="OpenLoadPopup();" data-rel="close">Load</a></li>
+        <li><a href="#" ng-click="OpenSavePopup('SAVE')" data-rel="close">Save</a></li>
+        <li><a href="#" ng-click="OpenSavePopup('SAVEAS')" data-rel="close">Save as</a></li>
+        <li data-role="list-divider">Life Cycle Cost (Power)</li>
+        <li data-icon=""><a href="#" data-rel="close" ng-click="GenerateReport()">Generate Report</a></li>
+        <li data-role="list-divider">Utilities</li>
+<!--        <li data-icon=""><a href="#" data-rel="close" ng-click="OpenLanguagePopup()">Languages</a></li>-->
+        <li data-icon=""><a href="#" data-rel="close" ng-click="OpenAboutPopup()">About LCC (Power)</a></li>
+        <li data-icon=""><a href="#" target="_blank" data-rel="close" ng-click="NavigateToInformationPage()">Application Information</a></li>
+	</ul>
+    <div id="divDownloadFile" style="display: none;" />
+</div>

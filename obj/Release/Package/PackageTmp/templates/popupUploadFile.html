@@ -1,0 +1,18 @@
+﻿<div id="popupUploadFile" data-theme="b" class="ui-corner-all" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width: 350px; max-width: 350px; max-height:190px;">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <form name="formUploader">
+        <div role="banner" class="ui-header ui-bar-f" data-theme="f">
+            <h1 aria-level="1" role="heading" class="ui-title" style="overflow: visible!important;margin-left:10%;">
+                {{uploadFilePopupTitle}}
+            </h1>
+        </div>
+        <div role="main" class="ui-content">
+            <span style="margin-left: 20px;">Select file to upload:</span>
+            <div class="fileUpload btn btn-primary" style="background-color: transparent;border-color: transparent;margin-top:-8px;" id="divFileUpload">
+                <a ng-click="TriggerUploadFileClick()"><img src="images/Upload 2-100.png" /></a>
+                <input type="file" class="upload" name="file" style="visibility:hidden;"
+                       onchange="angular.element(this).scope().filesChanged(this)" onclick="this.value = null" id="fileToUpload" />
+            </div>
+        </div>
+    </form>
+</div>

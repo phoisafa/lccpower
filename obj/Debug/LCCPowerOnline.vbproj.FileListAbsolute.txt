@@ -1,0 +1,228 @@
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csi.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csi.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.AppContext.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbprojResolveAssemblyReference.cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.Resources.resources
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbproj.GenerateResource.Cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.dll.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csi.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csi.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.AppContext.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.dll.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.Resources.resources
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbproj.GenerateResource.Cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\csc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\csc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\csc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\csi.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\csi.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\System.AppContext.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\vbc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\vbc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\vbc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\LCCPowerOnline.dll.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbprojResolveAssemblyReference.cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\obj\Debug\LCCPowerOnline.Resources.resources
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbproj.GenerateResource.Cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\obj\Debug\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\obj\Debug\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline_bk20170608-server\LCCPowerOnline\obj\Debug\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbprojResolveAssemblyReference.cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\csc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\csc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\csc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\csi.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\csi.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\System.AppContext.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\vbc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\vbc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\vbc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\LCCPowerOnline.dll.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbprojResolveAssemblyReference.cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\obj\Debug\LCCPowerOnline.Resources.resources
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbproj.GenerateResource.Cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\obj\Debug\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\obj\Debug\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline - Copy\LCCPowerOnline\obj\Debug\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\csc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\csc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\csc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\csi.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\csi.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\System.AppContext.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\vbc.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\vbc.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\vbc.rsp
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbprojResolveAssemblyReference.cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\obj\Debug\LCCPowerOnline.Resources.resources
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbproj.GenerateResource.Cache
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\obj\Debug\LCCPowerOnline.dll
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\obj\Debug\LCCPowerOnline.xml
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\obj\Debug\LCCPowerOnline.pdb
+D:\Development\GoOnline\LCCPowerOnline\LCCPowerOnline _bk20170710-Server\LCCPowerOnline\bin\LCCPowerOnline.dll.config
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.exe
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.exe.config
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csc.rsp
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csi.exe
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\csi.rsp
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.AppContext.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.exe
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.exe.config
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\vbc.rsp
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.dll.config
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.pdb
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\LCCPowerOnline.xml
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.Resources.resources
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbproj.GenerateResource.Cache
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.dll
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.xml
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.pdb
+D:\Development\Azure\LCCPowerOnline\LCCPowerOnline\obj\Debug\LCCPowerOnline.vbprojResolveAssemblyReference.cache

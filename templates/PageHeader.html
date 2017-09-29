@@ -1,0 +1,46 @@
+﻿<div data-role="header">
+    <div class="divBarHeader">
+        <table class="CamfilHeaderBanner">
+            <tr>
+                <td class="divBarHeaderCol1">&nbsp;</td>
+                <td class="divBarHeaderCol2">&nbsp;</td>
+            </tr>
+        </table>
+        <div class="divBarHeaderTitle">
+            <table>
+                <tr>
+                    <td class="divBarHeaderTitleCol1">
+                        <div style="margin-left: 10px;">
+                            <a href="#pnlOptions" ng-click="optionButtonOnClick()"><img ng-src="images/list_bullets.png" class="imgBtn" style="width: 30px; height: 30px;" title="Options"/></a>
+                        </div>
+                    </td>
+                    <td class="divBarHeaderTitleCol2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/PNGCamfilwhite.png" style="width: 125px;height: 30px;" />&nbsp;&nbsp;&nbsp;<img src="images/{{icon}}" alt="{{abrv}}" />
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span class="spanTitle">{{ title}}</span>
+                                                <br />
+                                                <label>Powered by Camfil AB R&D&nbsp;<small>(version: 1.0.0)</small></label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="divBarHeaderTitleCol3">
+                        <a ng-show="{{showPrevButton}}" ng-href="#" ng-click="prevButtonOnClick()"><img ng-src="images/left.png" class="imgBtn" style="width: 40px; height: 40px; margin-right:5px;" title="Next page" /></a>
+                        <a ng-show="{{showNextButton}}" ng-href="#" ng-click="nextButtonOnClick()"><img ng-src="images/right.png" class="imgBtn" style="width: 40px; height: 40px; margin-right:10px;" title="Previous page"/></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

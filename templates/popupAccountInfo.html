@@ -1,0 +1,87 @@
+﻿<div data-role="popup" id="popupAccountInfo" data-theme="b" class="ui-corner-all" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width: 600px; max-width: 600px;">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <form name="formAccountInfo">
+        <div role="banner" class="ui-header ui-bar-f" data-theme="f">
+            <table>
+                <tr>
+                    <td style="width:15%">
+                        <img src="images/PNGCamfilwhite.png" style="width: 85px;height: 25px;margin-left: 5%;" />
+                    </td>
+                    <td>
+                        <h1 aria-level="1" role="heading" class="ui-title">
+                            Account Info
+                        </h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div role="main" class="ui-content">
+            <div ng-show="CompanyLogo!=''">
+                <table style="width:80%;">
+                    <tr>
+                        <td align="center">
+                            <img id="imgAccountInfoCompanyLogo" ng-src="{{CompanyLogo}}" onerror="this.src='images/PNGCamfilwhite.png'" alt="#" style="width:150px;height:60px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table style="width:50%;">
+                                <tr>
+                                    <td>
+                                        <a href="#" style="width: 100px;height: 25px;font-size: 11px;" data-role="button" data-theme="d" ng-click="ChangeLogo();">Change logo</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" style="width: 100px;height: 25px;font-size: 11px;" data-role="button" data-theme="d" ng-click="RemoveLogo();">Remove logo</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td colspan="2">
+                                        <span style="color:red;font-size:10px;font-style:italic;margin-left:25%;">* Only file with jpg, jpeg and png file type are allowed.</span><br />
+                                        <span style="color:red;font-size:10px;font-style:italic;margin-left:25%;">  Recommended picture size-width:110 pixels height:35 pixels</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div ng-show="CompanyLogo==''">
+                <table style="width:100%;">
+                    <tr>
+                        <td align="center">
+                            <img id="imgAccountInfoCompanyLogo2" ng-src="images/PNGCamfilwhite.png" alt="#" style="width: 200px;height: 50px;background-color:#00673e;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" style="width: 100px;height: 25px;font-size: 11px;margin-left: 32%;" data-role="button" data-theme="d" ng-click="ChangeLogo();">Upload logo</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="color:red;font-size:10px;font-style:italic;margin-left: 32%;">* Only file with jpg, jpeg and png file type are allowed.</span><br />
+                            <span style="color:red;font-size:10px;font-style:italic;margin-left: 32%;">  Recommended picture size-width:110 pixels height:35 pixels</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table id="tableInfo" data-role="table" data-filter="false" class="ui-responsive filter-list">
+                <tbody>
+                    <tr ng-repeat="info in infoDetails">
+                        <td>{{info.title }}</td>
+                        <td>{{info.value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" data-icon="sign-out" data-theme="d" value="Sign Out" ng-click="SignOut()">
+                Sign Out
+            </button>
+        </div>
+    </form>
+</div>

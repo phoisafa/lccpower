@@ -1,0 +1,126 @@
+﻿<div data-role="popup" id="popupTurbineList" data-theme="b" class="ui-corner-all" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width: 600px; max-width: 600px;">
+    <form name="formTurbineList">
+        <div role="banner" class="ui-header ui-bar-f" data-theme="f">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 25%;">
+                        <div style="margin-left: 10px;">
+                            <a ng-href="#" ng-click="CancelSelectTurbine()"><img ng-src="images/delete.png" class="imgBtn" style="width: 24px; height: 24px;" /></a>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        <h1 aria-level="1" role="heading" class="ui-title">
+                            Select Turbine
+                        </h1>
+                    </td>
+                    <td style="width: 25%; text-align: right;">
+                        <div style="margin-right: 10px;">
+                            <a ng-href="#" ng-click="OKSelectTurbine()"><img ng-src="images/check.png" class="imgBtn" style="width: 24px; height: 24px;" /></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div role="banner" class="ui-header ui-bar-g" data-theme="g">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 10%;">
+                        <div style="margin-left: 10px;">
+                            <a id="backButton" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-back ui-btn-icon-notext ui-btn-d" ng-show="{{ShowBackButton}}" ng-click="SelectTurbineGoBack()">Back</a>
+                        </div>
+                    </td>
+                    <td style="width: 80%;">
+                        <h1 aria-level="1" role="heading" class="ui-title">
+                            Gas Turbine
+                        </h1>
+                    </td>
+                    <td style="width: 10%; text-align: right;">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div data-role="tabs" id="tabTurbineSelection" style=" width: 100%;padding: 5px !important;">
+            <div data-role="navbar" style="width: 99.3%;">
+                <ul>
+                    <li><a href="#Turbine" id="tabTurbine" data-ajax="false" class="ui-btn-active">All Gas turbines</a></li>
+                    <li><a href="#Grouping" id="tabGrouping" data-ajax="false">Grouping</a></li>
+                </ul>
+            </div>
+            <div id="Grouping" class="ui-body-d ui-content" style="padding:1px;">
+                <div role="main" class="ui-content" style="height: 450px; overflow: auto;padding-top:0px;">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="" ng-focus="" ng-blur="" data-inset="false" id="ulTurbineList" data-theme="c">
+                        <li ng-repeat="turbineInfo in groupingList | orderBy:['name']" ng-click="SelectTurbine(turbineInfo.value)" ng-switch on="turbineInfo.category">
+                            <a id="{{turbineInfo.value}}" ng-href="#" data-ajax="false" ng-switch-when="folder">
+                                {{turbineInfo.name}}
+                                <span class="ui-li-count">{{turbineInfo.totalChild}}</span>
+                            </a>
+                            <a id="{{turbineInfo.value}}" ng-href="#" data-ajax="false" ng-switch-when="item">
+                                <img ng-src="https://cfss.camfil.net/cfss2/picture/{{turbineInfo.picture}}" ng-if="turbineInfo.picture!=''" />
+                                <img ng-src="images/no-image.png" ng-if="turbineInfo.picture==''"/>
+                                <h3>{{turbineInfo.name}}</h3>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        Type:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.manufacturer}}
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        ISO base rating:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.isoBaseRating}} [kW]
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        Heat rate:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.heatRate}} [BTU/kWh]
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Turbine" class="ui-body-d ui-content" style="padding:1px;">
+                <div role="main" class="ui-content" style="height: 450px; overflow: auto;padding-top:0px;">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="" ng-focus="" ng-blur="" data-inset="false" id="ulGasTurbineList2" data-theme="c">
+                        <li ng-repeat="turbineInfo in modelList | orderBy:['name']" ng-click="SelectTurbine(turbineInfo.value)" ng-switch on="turbineInfo.category">
+                            <a id="{{turbineInfo.value}}" ng-href="#" data-ajax="false" ng-switch-when="item">
+                                <img ng-src="https://cfss.camfil.net/cfss2/picture/{{turbineInfo.picture}}" ng-if="turbineInfo.picture!=''" />
+                                <img ng-src="images/no-image.png" ng-if="turbineInfo.picture==''" />
+                                <h3>{{turbineInfo.name}}</h3>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        Manufacturer:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.manufacturer}}
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        ISO base rating:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.isoBaseRating}} [kW]
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        Heat rate:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.heatRate}} [BTU/kWh]
+                                </p>
+                                <p class="ui-li-desc" style="background-color: transparent; color: black;">
+                                    <strong>
+                                        Mass flow:&nbsp;
+                                    </strong>
+                                    {{turbineInfo.massFlow | number }} [lb/s]
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+

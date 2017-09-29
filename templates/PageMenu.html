@@ -1,0 +1,29 @@
+﻿<div class="divColPages">
+    <ul data-role="listview" data-inset="false" class="ulColPages">
+        <!--<li data-role="list-divider" data-theme="g">Pages</li>-->
+        <li data-role="list-divider" data-theme="g">
+            <span style="line-height: 1.5;">Pages</span>
+            <!--<div style="position: absolute; float: right; right: 11px; top: 2px;">
+                <a ng-href="#" ng-click="GenerateReport()"  style="right: -8px; float: right; position: relative;" title="{{ 'GENERATE_REPORT' | translate }}"><img src="images/chart_line.png" class="imgBtn" style="width: 30px; height: 30px;"></a>
+            </div>-->
+        </li>
+        <li ng-repeat="menu in PageMenu" data-theme="{{menu.theme}}"><a id="anc{{menu.name}}" data-transition="none"  ng-click="ChangePageMenu(menu.name)" ng-show="showPage(menu.name);">{{ menu.title }}</a></li><!--ng-href="#{{menu.name}}"-->
+    </ul>
+    <!--<div class="divColContentFullPage" id="divCleanRoomSummaryInfo"
+        style="overflow: auto;height: 320px;/* overflow-x: hidden; background-color: #F5F5F5;border: 1px solid #DDDDDD;border-radius: 4px 0 4px 0;*/
+               color: #3B3C3E;font-size: 12px; left: -1px;padding: 40px 0px 0px;margin-top:30px;">
+        <div data-overlay-theme="b" data-theme="b" class="ui-corner-all"  data-dismissible="false" >
+            <table  data-role="table" data-filter="false" class="ui-responsive filter-list" 
+                style="margin-top: -40px;color: black;text-shadow: 0 0px 0px;background-color: whitesmoke;font-size:small;">             
+                <tbody>
+                    <tr ng-repeat="info in infoDetails" ng-switch on="info.type">
+                        <td ng-switch-when="header" colspan="2" style="width:100%;text-align: center;background-color: #3e6790;color: white;">{{info.title}}</td>
+                        <td ng-switch-when="subheader" colspan="2" style="width:100%;text-align: center;background-color: #00673e;color: white;">{{info.title}}</td>
+                        <td ng-switch-when="detail" width="50%">{{info.title}}</td>
+                        <td ng-switch-when="detail" width="50%">{{info.value}}</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </div>-->
+</div>

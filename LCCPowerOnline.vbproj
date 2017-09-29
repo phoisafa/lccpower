@@ -1,0 +1,1379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2B146402-AAA1-4439-8C5C-BF568D3D08A8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LCCPowerOnline</RootNamespace>
+    <AssemblyName>LCCPowerOnline</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>LCCPowerOnline.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>LCCPowerOnline.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\app\filters\" />
+    <Folder Include="js\vendor\angular-1.3.9\i18n\" />
+    <Folder Include="languages\" />
+    <Folder Include="output\" />
+    <Folder Include="PDF\" />
+    <Folder Include="temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\app\app.css" />
+    <Content Include="css\app\ListViewGridStyle.css" />
+    <Content Include="css\app\msgBoxLight.css" />
+    <Content Include="css\app\OnOffSwitch.css" />
+    <Content Include="css\vendor\iconPack\jqm-icon-pack-fa-builder.css" />
+    <Content Include="css\vendor\iconPack\jqm-icon-pack-fa.css" />
+    <Content Include="css\vendor\iconPack\png\00.png" />
+    <Content Include="css\vendor\iconPack\png\01.png" />
+    <Content Include="css\vendor\iconPack\png\02.png" />
+    <Content Include="css\vendor\iconPack\png\03.png" />
+    <Content Include="css\vendor\iconPack\png\04.png" />
+    <Content Include="css\vendor\iconPack\png\05.png" />
+    <Content Include="css\vendor\iconPack\png\06.png" />
+    <Content Include="css\vendor\iconPack\png\07.png" />
+    <Content Include="css\vendor\iconPack\png\08.png" />
+    <Content Include="css\vendor\iconPack\png\09.png" />
+    <Content Include="css\vendor\iconPack\png\adjust.png" />
+    <Content Include="css\vendor\iconPack\png\adn.png" />
+    <Content Include="css\vendor\iconPack\png\align-center.png" />
+    <Content Include="css\vendor\iconPack\png\align-justify.png" />
+    <Content Include="css\vendor\iconPack\png\align-left.png" />
+    <Content Include="css\vendor\iconPack\png\align-right.png" />
+    <Content Include="css\vendor\iconPack\png\ambulance.png" />
+    <Content Include="css\vendor\iconPack\png\anchor.png" />
+    <Content Include="css\vendor\iconPack\png\android.png" />
+    <Content Include="css\vendor\iconPack\png\angle-double-down.png" />
+    <Content Include="css\vendor\iconPack\png\angle-double-left.png" />
+    <Content Include="css\vendor\iconPack\png\angle-double-right.png" />
+    <Content Include="css\vendor\iconPack\png\angle-double-up.png" />
+    <Content Include="css\vendor\iconPack\png\angle-down.png" />
+    <Content Include="css\vendor\iconPack\png\angle-left.png" />
+    <Content Include="css\vendor\iconPack\png\angle-right.png" />
+    <Content Include="css\vendor\iconPack\png\angle-up.png" />
+    <Content Include="css\vendor\iconPack\png\apple.png" />
+    <Content Include="css\vendor\iconPack\png\archive.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-down.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-left.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-o-down.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-o-left.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-o-right.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-o-up.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-right.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-circle-up.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-down.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-left.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-right.png" />
+    <Content Include="css\vendor\iconPack\png\arrow-up.png" />
+    <Content Include="css\vendor\iconPack\png\arrows-alt.png" />
+    <Content Include="css\vendor\iconPack\png\arrows-h.png" />
+    <Content Include="css\vendor\iconPack\png\arrows-v.png" />
+    <Content Include="css\vendor\iconPack\png\arrows.png" />
+    <Content Include="css\vendor\iconPack\png\asterisk.png" />
+    <Content Include="css\vendor\iconPack\png\backward.png" />
+    <Content Include="css\vendor\iconPack\png\ban.png" />
+    <Content Include="css\vendor\iconPack\png\bar-chart-o.png" />
+    <Content Include="css\vendor\iconPack\png\barcode.png" />
+    <Content Include="css\vendor\iconPack\png\bars.png" />
+    <Content Include="css\vendor\iconPack\png\beer.png" />
+    <Content Include="css\vendor\iconPack\png\bell-o.png" />
+    <Content Include="css\vendor\iconPack\png\bell.png" />
+    <Content Include="css\vendor\iconPack\png\bitbucket-square.png" />
+    <Content Include="css\vendor\iconPack\png\bitbucket.png" />
+    <Content Include="css\vendor\iconPack\png\bitcoin.png" />
+    <Content Include="css\vendor\iconPack\png\bold.png" />
+    <Content Include="css\vendor\iconPack\png\bolt.png" />
+    <Content Include="css\vendor\iconPack\png\book.png" />
+    <Content Include="css\vendor\iconPack\png\bookmark-o.png" />
+    <Content Include="css\vendor\iconPack\png\bookmark.png" />
+    <Content Include="css\vendor\iconPack\png\briefcase.png" />
+    <Content Include="css\vendor\iconPack\png\bug.png" />
+    <Content Include="css\vendor\iconPack\png\building-o.png" />
+    <Content Include="css\vendor\iconPack\png\bullhorn.png" />
+    <Content Include="css\vendor\iconPack\png\bullseye.png" />
+    <Content Include="css\vendor\iconPack\png\calendar-o.png" />
+    <Content Include="css\vendor\iconPack\png\calendar.png" />
+    <Content Include="css\vendor\iconPack\png\camera-retro.png" />
+    <Content Include="css\vendor\iconPack\png\camera.png" />
+    <Content Include="css\vendor\iconPack\png\caret-down.png" />
+    <Content Include="css\vendor\iconPack\png\caret-left.png" />
+    <Content Include="css\vendor\iconPack\png\caret-right.png" />
+    <Content Include="css\vendor\iconPack\png\caret-up.png" />
+    <Content Include="css\vendor\iconPack\png\certificate.png" />
+    <Content Include="css\vendor\iconPack\png\check-circle-o.png" />
+    <Content Include="css\vendor\iconPack\png\check-circle.png" />
+    <Content Include="css\vendor\iconPack\png\check-square-o.png" />
+    <Content Include="css\vendor\iconPack\png\check-square.png" />
+    <Content Include="css\vendor\iconPack\png\check.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-circle-down.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-circle-left.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-circle-right.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-circle-up.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-down.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-left.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-right.png" />
+    <Content Include="css\vendor\iconPack\png\chevron-up.png" />
+    <Content Include="css\vendor\iconPack\png\circle-o.png" />
+    <Content Include="css\vendor\iconPack\png\circle.png" />
+    <Content Include="css\vendor\iconPack\png\clipboard.png" />
+    <Content Include="css\vendor\iconPack\png\clock-o.png" />
+    <Content Include="css\vendor\iconPack\png\cloud-download.png" />
+    <Content Include="css\vendor\iconPack\png\cloud-upload.png" />
+    <Content Include="css\vendor\iconPack\png\cloud.png" />
+    <Content Include="css\vendor\iconPack\png\code-fork.png" />
+    <Content Include="css\vendor\iconPack\png\code.png" />
+    <Content Include="css\vendor\iconPack\png\coffee.png" />
+    <Content Include="css\vendor\iconPack\png\columns.png" />
+    <Content Include="css\vendor\iconPack\png\comment-o.png" />
+    <Content Include="css\vendor\iconPack\png\comment.png" />
+    <Content Include="css\vendor\iconPack\png\comments-o.png" />
+    <Content Include="css\vendor\iconPack\png\comments.png" />
+    <Content Include="css\vendor\iconPack\png\compass.png" />
+    <Content Include="css\vendor\iconPack\png\compress.png" />
+    <Content Include="css\vendor\iconPack\png\credit-card.png" />
+    <Content Include="css\vendor\iconPack\png\crop.png" />
+    <Content Include="css\vendor\iconPack\png\crosshairs.png" />
+    <Content Include="css\vendor\iconPack\png\css3.png" />
+    <Content Include="css\vendor\iconPack\png\cutlery.png" />
+    <Content Include="css\vendor\iconPack\png\dashboard.png" />
+    <Content Include="css\vendor\iconPack\png\dedent.png" />
+    <Content Include="css\vendor\iconPack\png\desktop.png" />
+    <Content Include="css\vendor\iconPack\png\dot-circle-o.png" />
+    <Content Include="css\vendor\iconPack\png\download.png" />
+    <Content Include="css\vendor\iconPack\png\dribbble.png" />
+    <Content Include="css\vendor\iconPack\png\dropbox.png" />
+    <Content Include="css\vendor\iconPack\png\edit.png" />
+    <Content Include="css\vendor\iconPack\png\eject.png" />
+    <Content Include="css\vendor\iconPack\png\ellipsis-h.png" />
+    <Content Include="css\vendor\iconPack\png\ellipsis-v.png" />
+    <Content Include="css\vendor\iconPack\png\envelope-o.png" />
+    <Content Include="css\vendor\iconPack\png\envelope.png" />
+    <Content Include="css\vendor\iconPack\png\eraser.png" />
+    <Content Include="css\vendor\iconPack\png\euro.png" />
+    <Content Include="css\vendor\iconPack\png\exchange.png" />
+    <Content Include="css\vendor\iconPack\png\exclamation-circle.png" />
+    <Content Include="css\vendor\iconPack\png\exclamation-triangle.png" />
+    <Content Include="css\vendor\iconPack\png\exclamation.png" />
+    <Content Include="css\vendor\iconPack\png\expand.png" />
+    <Content Include="css\vendor\iconPack\png\external-link-square.png" />
+    <Content Include="css\vendor\iconPack\png\external-link.png" />
+    <Content Include="css\vendor\iconPack\png\external-link3.png" />
+    <Content Include="css\vendor\iconPack\png\eye-slash.png" />
+    <Content Include="css\vendor\iconPack\png\eye.png" />
+    <Content Include="css\vendor\iconPack\png\facebook-square.png" />
+    <Content Include="css\vendor\iconPack\png\facebook.png" />
+    <Content Include="css\vendor\iconPack\png\facebook3.png" />
+    <Content Include="css\vendor\iconPack\png\fast-backward.png" />
+    <Content Include="css\vendor\iconPack\png\fast-forward.png" />
+    <Content Include="css\vendor\iconPack\png\female.png" />
+    <Content Include="css\vendor\iconPack\png\fighter-jet.png" />
+    <Content Include="css\vendor\iconPack\png\file-o.png" />
+    <Content Include="css\vendor\iconPack\png\file-text-o.png" />
+    <Content Include="css\vendor\iconPack\png\file-text.png" />
+    <Content Include="css\vendor\iconPack\png\file.png" />
+    <Content Include="css\vendor\iconPack\png\files-o.png" />
+    <Content Include="css\vendor\iconPack\png\film.png" />
+    <Content Include="css\vendor\iconPack\png\filter.png" />
+    <Content Include="css\vendor\iconPack\png\fire-extinguisher.png" />
+    <Content Include="css\vendor\iconPack\png\fire.png" />
+    <Content Include="css\vendor\iconPack\png\flag-checkered.png" />
+    <Content Include="css\vendor\iconPack\png\flag-o.png" />
+    <Content Include="css\vendor\iconPack\png\flag.png" />
+    <Content Include="css\vendor\iconPack\png\flask.png" />
+    <Content Include="css\vendor\iconPack\png\flickr.png" />
+    <Content Include="css\vendor\iconPack\png\folder-o.png" />
+    <Content Include="css\vendor\iconPack\png\folder-open-o.png" />
+    <Content Include="css\vendor\iconPack\png\folder-open.png" />
+    <Content Include="css\vendor\iconPack\png\folder.png" />
+    <Content Include="css\vendor\iconPack\png\font.png" />
+    <Content Include="css\vendor\iconPack\png\forward.png" />
+    <Content Include="css\vendor\iconPack\png\foursquare.png" />
+    <Content Include="css\vendor\iconPack\png\frown-o.png" />
+    <Content Include="css\vendor\iconPack\png\gamepad.png" />
+    <Content Include="css\vendor\iconPack\png\gavel.png" />
+    <Content Include="css\vendor\iconPack\png\gbp.png" />
+    <Content Include="css\vendor\iconPack\png\gear.png" />
+    <Content Include="css\vendor\iconPack\png\gears.png" />
+    <Content Include="css\vendor\iconPack\png\gift.png" />
+    <Content Include="css\vendor\iconPack\png\github-alt.png" />
+    <Content Include="css\vendor\iconPack\png\github-square.png" />
+    <Content Include="css\vendor\iconPack\png\github.png" />
+    <Content Include="css\vendor\iconPack\png\gittip.png" />
+    <Content Include="css\vendor\iconPack\png\glass.png" />
+    <Content Include="css\vendor\iconPack\png\globe.png" />
+    <Content Include="css\vendor\iconPack\png\globe3.png" />
+    <Content Include="css\vendor\iconPack\png\google-plus-square.png" />
+    <Content Include="css\vendor\iconPack\png\google-plus.png" />
+    <Content Include="css\vendor\iconPack\png\group.png" />
+    <Content Include="css\vendor\iconPack\png\h-square.png" />
+    <Content Include="css\vendor\iconPack\png\hand-o-down.png" />
+    <Content Include="css\vendor\iconPack\png\hand-o-left.png" />
+    <Content Include="css\vendor\iconPack\png\hand-o-right.png" />
+    <Content Include="css\vendor\iconPack\png\hand-o-up.png" />
+    <Content Include="css\vendor\iconPack\png\hdd-o.png" />
+    <Content Include="css\vendor\iconPack\png\headphones.png" />
+    <Content Include="css\vendor\iconPack\png\heart-o.png" />
+    <Content Include="css\vendor\iconPack\png\heart.png" />
+    <Content Include="css\vendor\iconPack\png\home.png" />
+    <Content Include="css\vendor\iconPack\png\hospital-o.png" />
+    <Content Include="css\vendor\iconPack\png\html5.png" />
+    <Content Include="css\vendor\iconPack\png\i00.png" />
+    <Content Include="css\vendor\iconPack\png\i01.png" />
+    <Content Include="css\vendor\iconPack\png\i02.png" />
+    <Content Include="css\vendor\iconPack\png\i03.png" />
+    <Content Include="css\vendor\iconPack\png\i04.png" />
+    <Content Include="css\vendor\iconPack\png\i05.png" />
+    <Content Include="css\vendor\iconPack\png\i06.png" />
+    <Content Include="css\vendor\iconPack\png\i07.png" />
+    <Content Include="css\vendor\iconPack\png\i08.png" />
+    <Content Include="css\vendor\iconPack\png\i09.png" />
+    <Content Include="css\vendor\iconPack\png\inbox.png" />
+    <Content Include="css\vendor\iconPack\png\indent.png" />
+    <Content Include="css\vendor\iconPack\png\info-circle.png" />
+    <Content Include="css\vendor\iconPack\png\info.png" />
+    <Content Include="css\vendor\iconPack\png\inr.png" />
+    <Content Include="css\vendor\iconPack\png\instagram.png" />
+    <Content Include="css\vendor\iconPack\png\italic.png" />
+    <Content Include="css\vendor\iconPack\png\jpy.png" />
+    <Content Include="css\vendor\iconPack\png\key.png" />
+    <Content Include="css\vendor\iconPack\png\keyboard-o.png" />
+    <Content Include="css\vendor\iconPack\png\krw.png" />
+    <Content Include="css\vendor\iconPack\png\laptop.png" />
+    <Content Include="css\vendor\iconPack\png\leaf.png" />
+    <Content Include="css\vendor\iconPack\png\lemon-o.png" />
+    <Content Include="css\vendor\iconPack\png\level-down.png" />
+    <Content Include="css\vendor\iconPack\png\level-up.png" />
+    <Content Include="css\vendor\iconPack\png\lightbulb-o.png" />
+    <Content Include="css\vendor\iconPack\png\link.png" />
+    <Content Include="css\vendor\iconPack\png\linkedin-square.png" />
+    <Content Include="css\vendor\iconPack\png\linkedin.png" />
+    <Content Include="css\vendor\iconPack\png\linux.png" />
+    <Content Include="css\vendor\iconPack\png\list-alt.png" />
+    <Content Include="css\vendor\iconPack\png\list-ol.png" />
+    <Content Include="css\vendor\iconPack\png\list-ul.png" />
+    <Content Include="css\vendor\iconPack\png\list.png" />
+    <Content Include="css\vendor\iconPack\png\location-arrow.png" />
+    <Content Include="css\vendor\iconPack\png\lock.png" />
+    <Content Include="css\vendor\iconPack\png\long-arrow-down.png" />
+    <Content Include="css\vendor\iconPack\png\long-arrow-left.png" />
+    <Content Include="css\vendor\iconPack\png\long-arrow-right.png" />
+    <Content Include="css\vendor\iconPack\png\long-arrow-up.png" />
+    <Content Include="css\vendor\iconPack\png\magic.png" />
+    <Content Include="css\vendor\iconPack\png\magnet.png" />
+    <Content Include="css\vendor\iconPack\png\mail-forward.png" />
+    <Content Include="css\vendor\iconPack\png\mail-reply-all.png" />
+    <Content Include="css\vendor\iconPack\png\mail-reply.png" />
+    <Content Include="css\vendor\iconPack\png\male.png" />
+    <Content Include="css\vendor\iconPack\png\map-marker.png" />
+    <Content Include="css\vendor\iconPack\png\maxcdn.png" />
+    <Content Include="css\vendor\iconPack\png\medkit.png" />
+    <Content Include="css\vendor\iconPack\png\meh-o.png" />
+    <Content Include="css\vendor\iconPack\png\microphone-slash.png" />
+    <Content Include="css\vendor\iconPack\png\microphone.png" />
+    <Content Include="css\vendor\iconPack\png\minus-circle.png" />
+    <Content Include="css\vendor\iconPack\png\minus-square-o.png" />
+    <Content Include="css\vendor\iconPack\png\minus-square.png" />
+    <Content Include="css\vendor\iconPack\png\minus.png" />
+    <Content Include="css\vendor\iconPack\png\mobile.png" />
+    <Content Include="css\vendor\iconPack\png\money.png" />
+    <Content Include="css\vendor\iconPack\png\moon-o.png" />
+    <Content Include="css\vendor\iconPack\png\music.png" />
+    <Content Include="css\vendor\iconPack\png\pagelines.png" />
+    <Content Include="css\vendor\iconPack\png\paperclip.png" />
+    <Content Include="css\vendor\iconPack\png\pause.png" />
+    <Content Include="css\vendor\iconPack\png\pencil-square.png" />
+    <Content Include="css\vendor\iconPack\png\pencil.png" />
+    <Content Include="css\vendor\iconPack\png\phone-square.png" />
+    <Content Include="css\vendor\iconPack\png\phone.png" />
+    <Content Include="css\vendor\iconPack\png\picture-o.png" />
+    <Content Include="css\vendor\iconPack\png\pinterest-square.png" />
+    <Content Include="css\vendor\iconPack\png\pinterest.png" />
+    <Content Include="css\vendor\iconPack\png\plane.png" />
+    <Content Include="css\vendor\iconPack\png\play-circle-o.png" />
+    <Content Include="css\vendor\iconPack\png\play-circle.png" />
+    <Content Include="css\vendor\iconPack\png\play.png" />
+    <Content Include="css\vendor\iconPack\png\plus-circle.png" />
+    <Content Include="css\vendor\iconPack\png\plus-square-o.png" />
+    <Content Include="css\vendor\iconPack\png\plus-square.png" />
+    <Content Include="css\vendor\iconPack\png\plus.png" />
+    <Content Include="css\vendor\iconPack\png\power-off.png" />
+    <Content Include="css\vendor\iconPack\png\print.png" />
+    <Content Include="css\vendor\iconPack\png\puzzle-piece.png" />
+    <Content Include="css\vendor\iconPack\png\qrcode.png" />
+    <Content Include="css\vendor\iconPack\png\question-circle.png" />
+    <Content Include="css\vendor\iconPack\png\question.png" />
+    <Content Include="css\vendor\iconPack\png\quote-left.png" />
+    <Content Include="css\vendor\iconPack\png\quote-right.png" />
+    <Content Include="css\vendor\iconPack\png\random.png" />
+    <Content Include="css\vendor\iconPack\png\refresh.png" />
+    <Content Include="css\vendor\iconPack\png\retweet.png" />
+    <Content Include="css\vendor\iconPack\png\road.png" />
+    <Content Include="css\vendor\iconPack\png\rocket.png" />
+    <Content Include="css\vendor\iconPack\png\rotate-right.png" />
+    <Content Include="css\vendor\iconPack\png\rss-square.png" />
+    <Content Include="css\vendor\iconPack\png\rss.png" />
+    <Content Include="css\vendor\iconPack\png\rub.png" />
+    <Content Include="css\vendor\iconPack\png\save.png" />
+    <Content Include="css\vendor\iconPack\png\scissors.png" />
+    <Content Include="css\vendor\iconPack\png\search-minus.png" />
+    <Content Include="css\vendor\iconPack\png\search-plus.png" />
+    <Content Include="css\vendor\iconPack\png\search.png" />
+    <Content Include="css\vendor\iconPack\png\share-square-o.png" />
+    <Content Include="css\vendor\iconPack\png\share-square.png" />
+    <Content Include="css\vendor\iconPack\png\shield.png" />
+    <Content Include="css\vendor\iconPack\png\shopping-cart.png" />
+    <Content Include="css\vendor\iconPack\png\sign-in.png" />
+    <Content Include="css\vendor\iconPack\png\sign-out.png" />
+    <Content Include="css\vendor\iconPack\png\signal.png" />
+    <Content Include="css\vendor\iconPack\png\sitemap.png" />
+    <Content Include="css\vendor\iconPack\png\skype.png" />
+    <Content Include="css\vendor\iconPack\png\smile-o.png" />
+    <Content Include="css\vendor\iconPack\png\sort-alpha-asc.png" />
+    <Content Include="css\vendor\iconPack\png\sort-alpha-desc.png" />
+    <Content Include="css\vendor\iconPack\png\sort-amount-asc.png" />
+    <Content Include="css\vendor\iconPack\png\sort-amount-desc.png" />
+    <Content Include="css\vendor\iconPack\png\sort-down.png" />
+    <Content Include="css\vendor\iconPack\png\sort-numeric-asc.png" />
+    <Content Include="css\vendor\iconPack\png\sort-numeric-desc.png" />
+    <Content Include="css\vendor\iconPack\png\sort-up.png" />
+    <Content Include="css\vendor\iconPack\png\sort.png" />
+    <Content Include="css\vendor\iconPack\png\spinner.png" />
+    <Content Include="css\vendor\iconPack\png\square-o.png" />
+    <Content Include="css\vendor\iconPack\png\square.png" />
+    <Content Include="css\vendor\iconPack\png\stack-exchange.png" />
+    <Content Include="css\vendor\iconPack\png\stack-overflow.png" />
+    <Content Include="css\vendor\iconPack\png\star-half-o.png" />
+    <Content Include="css\vendor\iconPack\png\star-half.png" />
+    <Content Include="css\vendor\iconPack\png\star-o.png" />
+    <Content Include="css\vendor\iconPack\png\star.png" />
+    <Content Include="css\vendor\iconPack\png\step-backward.png" />
+    <Content Include="css\vendor\iconPack\png\step-forward.png" />
+    <Content Include="css\vendor\iconPack\png\stethoscope.png" />
+    <Content Include="css\vendor\iconPack\png\stop.png" />
+    <Content Include="css\vendor\iconPack\png\strikethrough.png" />
+    <Content Include="css\vendor\iconPack\png\subscript.png" />
+    <Content Include="css\vendor\iconPack\png\suitcase.png" />
+    <Content Include="css\vendor\iconPack\png\sun-o.png" />
+    <Content Include="css\vendor\iconPack\png\superscript.png" />
+    <Content Include="css\vendor\iconPack\png\table.png" />
+    <Content Include="css\vendor\iconPack\png\tablet.png" />
+    <Content Include="css\vendor\iconPack\png\tag.png" />
+    <Content Include="css\vendor\iconPack\png\tags.png" />
+    <Content Include="css\vendor\iconPack\png\terminal.png" />
+    <Content Include="css\vendor\iconPack\png\text-height.png" />
+    <Content Include="css\vendor\iconPack\png\text-width.png" />
+    <Content Include="css\vendor\iconPack\png\th-large.png" />
+    <Content Include="css\vendor\iconPack\png\th-list.png" />
+    <Content Include="css\vendor\iconPack\png\th.png" />
+    <Content Include="css\vendor\iconPack\png\thumb-tack.png" />
+    <Content Include="css\vendor\iconPack\png\thumbs-o-down.png" />
+    <Content Include="css\vendor\iconPack\png\thumbs-o-up.png" />
+    <Content Include="css\vendor\iconPack\png\thumbs-thumb.png" />
+    <Content Include="css\vendor\iconPack\png\thumbs-up.png" />
+    <Content Include="css\vendor\iconPack\png\ticket.png" />
+    <Content Include="css\vendor\iconPack\png\times-circle-o.png" />
+    <Content Include="css\vendor\iconPack\png\times-circle.png" />
+    <Content Include="css\vendor\iconPack\png\times.png" />
+    <Content Include="css\vendor\iconPack\png\tint.png" />
+    <Content Include="css\vendor\iconPack\png\toggle-down.png" />
+    <Content Include="css\vendor\iconPack\png\toggle-left.png" />
+    <Content Include="css\vendor\iconPack\png\toggle-right.png" />
+    <Content Include="css\vendor\iconPack\png\toggle-up.png" />
+    <Content Include="css\vendor\iconPack\png\trash-o.png" />
+    <Content Include="css\vendor\iconPack\png\trello.png" />
+    <Content Include="css\vendor\iconPack\png\truck.png" />
+    <Content Include="css\vendor\iconPack\png\tumblr-square.png" />
+    <Content Include="css\vendor\iconPack\png\tumblr.png" />
+    <Content Include="css\vendor\iconPack\png\turkish-lira.png" />
+    <Content Include="css\vendor\iconPack\png\twitter-square.png" />
+    <Content Include="css\vendor\iconPack\png\twitter.png" />
+    <Content Include="css\vendor\iconPack\png\umbrella.png" />
+    <Content Include="css\vendor\iconPack\png\underline.png" />
+    <Content Include="css\vendor\iconPack\png\undo.png" />
+    <Content Include="css\vendor\iconPack\png\unlink.png" />
+    <Content Include="css\vendor\iconPack\png\unlock-alt.png" />
+    <Content Include="css\vendor\iconPack\png\upload.png" />
+    <Content Include="css\vendor\iconPack\png\usd.png" />
+    <Content Include="css\vendor\iconPack\png\user-md.png" />
+    <Content Include="css\vendor\iconPack\png\user.png" />
+    <Content Include="css\vendor\iconPack\png\video-camera.png" />
+    <Content Include="css\vendor\iconPack\png\vimeo-square.png" />
+    <Content Include="css\vendor\iconPack\png\vk.png" />
+    <Content Include="css\vendor\iconPack\png\vk3.png" />
+    <Content Include="css\vendor\iconPack\png\volume-down.png" />
+    <Content Include="css\vendor\iconPack\png\volume-off.png" />
+    <Content Include="css\vendor\iconPack\png\volume-up.png" />
+    <Content Include="css\vendor\iconPack\png\weibo.png" />
+    <Content Include="css\vendor\iconPack\png\wheelchair.png" />
+    <Content Include="css\vendor\iconPack\png\windows.png" />
+    <Content Include="css\vendor\iconPack\png\wrench.png" />
+    <Content Include="css\vendor\iconPack\png\xing-square.png" />
+    <Content Include="css\vendor\iconPack\png\xing.png" />
+    <Content Include="css\vendor\iconPack\png\youtube-play.png" />
+    <Content Include="css\vendor\iconPack\png\youtube-square.png" />
+    <Content Include="css\vendor\iconPack\png\youtube.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\CFSSWeb.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\CFSSWeb.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\ajax-loader.gif" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\action-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\action-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\alert-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\alert-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-d-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-d-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-u-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\arrow-u-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\audio-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\audio-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\back-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\back-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\bars-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\bars-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\bullets-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\bullets-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\calendar-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\calendar-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\camera-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\camera-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-d-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-d-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-u-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\carat-u-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\check-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\check-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\clock-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\clock-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\cloud-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\cloud-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\comment-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\comment-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\delete-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\delete-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\edit-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\edit-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\eye-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\eye-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\forbidden-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\forbidden-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\forward-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\forward-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\gear-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\gear-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\grid-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\grid-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\heart-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\heart-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\home-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\home-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\info-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\info-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\location-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\location-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\lock-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\lock-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\mail-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\mail-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\minus-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\minus-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\navigation-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\navigation-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\phone-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\phone-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\plus-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\plus-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\power-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\power-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\recycle-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\recycle-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\refresh-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\refresh-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\search-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\search-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\shop-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\shop-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\star-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\star-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\tag-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\tag-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\user-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\user-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\video-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\images\icons-png\video-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\CFSSWeb\jquery.mobile.icons.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\ajax-loader.gif" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\action-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\action-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\alert-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\alert-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-d-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-d-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-u-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\arrow-u-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\audio-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\audio-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\back-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\back-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\bars-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\bars-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\bullets-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\bullets-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\calendar-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\calendar-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\camera-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\camera-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-d-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-d-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-l-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-l-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-r-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-r-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-u-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\carat-u-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\check-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\check-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\clock-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\clock-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\cloud-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\cloud-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\comment-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\comment-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\delete-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\delete-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\edit-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\edit-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\eye-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\eye-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\forbidden-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\forbidden-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\forward-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\forward-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\gear-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\gear-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\grid-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\grid-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\heart-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\heart-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\home-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\home-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\info-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\info-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\location-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\location-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\lock-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\lock-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\mail-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\mail-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\minus-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\minus-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\navigation-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\navigation-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\phone-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\phone-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\plus-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\plus-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\power-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\power-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\recycle-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\recycle-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\refresh-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\refresh-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\search-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\search-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\shop-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\shop-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\star-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\star-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\tag-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\tag-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\user-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\user-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\video-black.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-png\video-white.png" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\action-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\action-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\alert-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\alert-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-d-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-d-l-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-d-l-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-d-r-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-d-r-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-d-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-l-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-l-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-r-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-r-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-u-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-u-l-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-u-l-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-u-r-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-u-r-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\arrow-u-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\audio-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\audio-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\back-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\back-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\bars-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\bars-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\bullets-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\bullets-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\calendar-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\calendar-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\camera-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\camera-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-d-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-d-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-l-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-l-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-r-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-r-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-u-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\carat-u-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\check-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\check-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\clock-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\clock-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\cloud-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\cloud-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\comment-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\comment-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\delete-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\delete-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\edit-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\edit-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\eye-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\eye-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\forbidden-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\forbidden-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\forward-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\forward-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\gear-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\gear-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\grid-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\grid-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\heart-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\heart-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\home-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\home-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\info-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\info-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\location-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\location-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\lock-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\lock-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\mail-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\mail-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\minus-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\minus-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\navigation-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\navigation-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\phone-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\phone-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\plus-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\plus-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\power-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\power-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\recycle-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\recycle-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\refresh-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\refresh-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\search-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\search-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\shop-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\shop-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\star-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\star-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\tag-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\tag-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\user-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\user-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\video-black.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\images\icons-svg\video-white.svg" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile-1.4.3.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile.external-png-1.4.3.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile.icons-1.4.3.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile.inline-png-1.4.3.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile.inline-svg-1.4.3.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile.structure-1.4.3.min.css" />
+    <Content Include="css\vendor\jqm1.4.3\themes\default\jquery.mobile.theme-1.4.3.min.css" />
+    <Content Include="css\vendor\jqmDatePicker_0.1.1\jquery.mobile.datepicker.css" />
+    <Content Include="css\vendor\jquery.editable-select\jquery.editable-select.css" />
+    <Content Include="css\vendor\ngBootStrap3.1.1\bootstrap.css" />
+    <Content Include="css\vendor\ngBootStrap3.1.1\bootstrap_original.css" />
+    <Content Include="images\Add Folder-100.png" />
+    <Content Include="images\Add Folder-104.png" />
+    <Content Include="images\alert.png" />
+    <Content Include="images\Banner.jpg" />
+    <Content Include="images\BestPerformance.png" />
+    <Content Include="images\bg_c-flow.png" />
+    <Content Include="images\bg_camfil.jpg" />
+    <Content Include="images\bg_corners.gif" />
+    <Content Include="images\bg_page-header-1.png" />
+    <Content Include="images\bg_page-header-2.png" />
+    <Content Include="images\calc.png" />
+    <Content Include="images\CamfilGreenLoading.gif" />
+    <Content Include="images\chart_line.png" />
+    <Content Include="images\check.png" />
+    <Content Include="images\confirm.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\Document-104.png" />
+    <Content Include="images\error.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\Folder Filled-100.png" />
+    <Content Include="images\folder_add.png" />
+    <Content Include="images\FooterBackground.png" />
+    <Content Include="images\gfx_camfil-logo.png" />
+    <Content Include="images\icons8-Copy-26.png" />
+    <Content Include="images\icons8-Paste-26.png" />
+    <Content Include="images\info.png" />
+    <Content Include="images\LCC_Power.png" />
+    <Content Include="images\left.png" />
+    <Content Include="images\list_bullets.png" />
+    <Content Include="images\msgBoxBackGround.png" />
+    <Content Include="images\no-image.png" />
+    <Content Include="images\NoImage.jpg" />
+    <Content Include="images\Open Folder-104.png" />
+    <Content Include="images\playback_reload.png" />
+    <Content Include="images\PNGCamfilwhite.png" />
+    <Content Include="images\right.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\Undo-100.png" />
+    <Content Include="images\Upload 2-100.png" />
+    <Content Include="images\zoom.png" />
+    <Content Include="index.html" />
+    <Content Include="js\app\app.js" />
+    <Content Include="js\app\controllers\ComparisonCtrl.js" />
+    <Content Include="js\app\controllers\CostsRatesCtrl.js" />
+    <Content Include="js\app\controllers\FilterCtrl.js" />
+    <Content Include="js\app\controllers\GasTurbineCtrl.js" />
+    <Content Include="js\app\controllers\LoginCtrl.js" />
+    <Content Include="js\app\controllers\PageMenuCtrl.js" />
+    <Content Include="js\app\controllers\PanelCtrl.js" />
+    <Content Include="js\app\controllers\ProjectInfoCtrl.js" />
+    <Content Include="js\app\controllers\ResultsCtrl.js" />
+    <Content Include="js\app\controllers\RunningCondCtrl.js" />
+    <Content Include="js\app\controllers\SolutionsToCompareCtrl.js" />
+    <Content Include="js\app\controllers\UnitMeasurementCtrl.js" />
+    <Content Include="js\app\directives\generalDirectives.js" />
+    <Content Include="js\app\directives\Login.js" />
+    <Content Include="js\app\directives\Page.js" />
+    <Content Include="js\app\factories\lccElements.js" />
+    <Content Include="js\app\factories\lccFunctions.js" />
+    <Content Include="js\app\factories\generalElements.js" />
+    <Content Include="js\app\factories\generalFunctions.js" />
+    <Content Include="js\app\index.js" />
+    <Content Include="js\app\services\DataCollectionSharedService.js" />
+    <Content Include="js\app\services\GeneralSharedServices.js" />
+    <Content Include="js\plugin\FastClick.js" />
+    <Content Include="js\plugin\jquery-mobile-angular-adapter.js" />
+    <Content Include="js\plugin\jquery.ui.datepicker.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-cookies.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-cookies.min.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-loader-partial.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-loader-partial.min.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-loader-static-files.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-loader-static-files.min.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-loader-url.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-loader-url.min.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-storage-cookie.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-storage-cookie.min.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-storage-local.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate-storage-local.min.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate.js" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-translate.min.js" />
+    <Content Include="js\vendor\html2canvas_v0.4.1\html2canvas.js" />
+    <Content Include="js\vendor\jq1.8\jquery.js" />
+    <Content Include="js\vendor\jqm1.4.3\jquery.mobile-1.4.2.js" />
+    <Content Include="js\vendor\jqm1.4.3\jquery.mobile-1.4.2.min.js" />
+    <Content Include="js\vendor\jqm1.4.3\jquery.mobile-1.4.3.js" />
+    <Content Include="js\vendor\jqm1.4.3\jquery.mobile-1.4.3.min.js" />
+    <Content Include="js\vendor\jqmDatePicker_0.1.1\jquery.mobile.datepicker.js" />
+    <Content Include="js\vendor\jquery.editable-select\jquery.editable-select.js" />
+    <Content Include="js\vendor\jQuery.msgBox\jQuery.msgBox.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-animate.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-animate.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-cookies.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-cookies.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-csp.css" />
+    <Content Include="js\vendor\ng1.2.18\angular-loader.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-loader.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-mocks.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-resource.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-resource.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-route.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-route.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-sanitize.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-sanitize.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-scenario.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-touch.js" />
+    <Content Include="js\vendor\ng1.2.18\angular-touch.min.js" />
+    <Content Include="js\vendor\ng1.2.18\angular.js" />
+    <Content Include="js\vendor\ng1.2.18\angular.min.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_af-na.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_af-za.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_af.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_am-et.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_am.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-001.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-ae.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-bh.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-dz.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-eg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-iq.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-jo.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-kw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-lb.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-ly.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-ma.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-om.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-qa.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-sa.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-sd.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-sy.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-tn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar-ye.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ar.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_bg-bg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_bg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_bn-bd.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_bn-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_bn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ca-ad.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ca-es.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ca.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_cs-cz.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_cs.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_da-dk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_da.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de-at.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de-be.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de-ch.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de-de.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de-li.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de-lu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_de.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_el-cy.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_el-gr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_el.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-as.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-au.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-bb.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-be.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-bm.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-bw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-bz.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-ca.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-dsrt-us.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-dsrt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-fm.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-gb.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-gu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-gy.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-hk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-ie.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-iso.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-jm.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-mh.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-mp.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-mt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-mu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-na.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-nz.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-ph.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-pk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-pr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-pw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-sg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-tc.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-tt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-um.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-us.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-vg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-vi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-za.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en-zw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_en.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-419.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-ar.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-bo.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-cl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-co.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-cr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-do.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-ea.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-ec.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-es.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-gq.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-gt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-hn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-ic.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-mx.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-ni.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-pa.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-pe.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-pr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-py.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-sv.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-us.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-uy.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es-ve.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_es.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_et-ee.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_et.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_eu-es.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_eu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fa-af.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fa-ir.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fa.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fi-fi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fil-ph.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fil.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-be.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-bf.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-bi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-bj.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-bl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-ca.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-cd.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-cf.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-cg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-ch.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-ci.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-cm.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-dj.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-fr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-ga.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-gf.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-gn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-gp.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-gq.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-km.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-lu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-mc.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-mf.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-mg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-ml.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-mq.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-ne.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-re.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-rw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-sn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-td.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-tg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr-yt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_fr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_gl-es.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_gl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_gsw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_gu-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_gu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_he-il.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_he.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_hi-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_hi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_hr-hr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_hr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_hu-hu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_hu.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_id-id.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_id.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_is-is.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_is.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_it-ch.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_it-it.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_it-sm.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_it.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_iw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ja-jp.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ja.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_kn-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_kn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ko-kr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ko.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ln-cd.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ln-cg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ln.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_lt-lt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_lt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_lv-lv.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_lv.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ml-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ml.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_mr-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_mr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ms-bn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ms-my.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ms.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_mt-mt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_mt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_nl-aw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_nl-be.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_nl-cw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_nl-nl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_nl-sx.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_nl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_no.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_or-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_or.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pl-pl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt-ao.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt-br.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt-gw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt-mz.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt-pt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt-st.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_pt.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ro-md.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ro-ro.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ro.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ru-md.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ru-ru.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ru-ua.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ru.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sk-sk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sl-si.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sq-al.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sq.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-cyrl-ba.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-cyrl-me.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-cyrl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-latn-ba.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-latn-me.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr-latn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sv-fi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sv-se.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sv.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sw-ke.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sw-tz.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_sw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ta-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ta-lk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ta.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_te-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_te.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_th-th.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_th.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_tl.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_tr-tr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_tr.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_uk-ua.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_uk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ur-in.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ur-pk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_ur.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_vi-vn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_vi.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-cn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hans-hk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hans-mo.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hans-sg.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hans.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hant-hk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hant-mo.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hant-tw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hant.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-hk.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh-tw.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zh.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zu-za.js" />
+    <Content Include="js\vendor\ng1.2.18\i18n\angular-locale_zu.js" />
+    <Content Include="js\vendor\ng1.2.18\version.txt" />
+    <Content Include="js\vendor\ngBootStrap\template\alert\alert.html" />
+    <Content Include="js\vendor\ngBootStrap\template\carousel\carousel.html" />
+    <Content Include="js\vendor\ngBootStrap\template\carousel\slide.html" />
+    <Content Include="js\vendor\ngBootStrap\template\datepicker\datepicker.html" />
+    <Content Include="js\vendor\ngBootStrap\template\datepicker\day.html" />
+    <Content Include="js\vendor\ngBootStrap\template\datepicker\month.html" />
+    <Content Include="js\vendor\ngBootStrap\template\datepicker\popup.html" />
+    <Content Include="js\vendor\ngBootStrap\template\datepicker\year.html" />
+    <Content Include="js\vendor\ngBootStrap\template\popover\popover.html" />
+    <Content Include="js\vendor\ngBootStrap\template\progressbar\bar.html" />
+    <Content Include="js\vendor\ngBootStrap\template\progressbar\progress.html" />
+    <Content Include="js\vendor\ngBootStrap\template\progressbar\progressbar.html" />
+    <Content Include="js\vendor\ngBootStrap\template\rating\rating.html" />
+    <Content Include="js\vendor\ngBootStrap\template\tabs\tab.html" />
+    <Content Include="js\vendor\ngBootStrap\template\tabs\tabset.html" />
+    <Content Include="js\vendor\ngBootStrap\template\timepicker\timepicker.html" />
+    <Content Include="js\vendor\ngBootStrap\template\tooltip\tooltip-html-unsafe-popup.html" />
+    <Content Include="js\vendor\ngBootStrap\template\tooltip\tooltip-popup.html" />
+    <Content Include="js\vendor\ngBootStrap\ui-bootstrap-custom-0.10.0.js" />
+    <Content Include="js\vendor\ngBootStrap\ui-bootstrap-custom-0.10.0.min.js" />
+    <Content Include="js\vendor\ngBootStrap\ui-bootstrap-custom-tpls-0.10.0.js" />
+    <Content Include="js\vendor\ngBootStrap\ui-bootstrap-custom-tpls-0.10.0.min.js" />
+    <Content Include="js\vendor\ngBootStrap\ui-bootstrap-popover.js" />
+    <Content Include="js\vendor\ngBootStrap\ui-bootstrap-tooltip.js" />
+    <Content Include="js\vendor\ngFileUpload\ng-file-upload-shim.min.js" />
+    <Content Include="js\vendor\ngFileUpload\ng-file-upload.min.js" />
+    <Content Include="templates\PageFilter.html" />
+    <Content Include="templates\PageHeader.html" />
+    <Content Include="templates\PageMenu.html" />
+    <Content Include="templates\PageSectionSpace.html" />
+    <Content Include="templates\PageSectionTitle.html" />
+    <Content Include="templates\PageSectionTitleWithSwitch.html" />
+    <Content Include="templates\PageSystemTitle.html" />
+    <Content Include="templates\PageTitle.html" />
+    <Content Include="templates\panelOptions.html" />
+    <Content Include="templates\popupAccountInfo.html" />
+    <Content Include="templates\popupChart.html" />
+    <Content Include="templates\popupFilterList.html" />
+    <Content Include="templates\popupLogin.html" />
+    <Content Include="templates\popupTurbineList.html" />
+    <Content Include="templates\popupUploadFile.html" />
+    <Content Include="templates\ProjectInfo.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\vendor\iconPack\jqm-icon-pack-fa.scss" />
+    <Content Include="css\vendor\iconPack\png\Thumbs.db" />
+    <Content Include="css\vendor\ngBootStrap3.1.1\bootstrap.css.map" />
+    <Content Include="fonts\ARIALN.TTF" />
+    <Content Include="fonts\ARIALNB.TTF" />
+    <Content Include="fonts\calibri.ttf" />
+    <Content Include="fonts\calibrib.ttf" />
+    <Content Include="fonts\chinese.stsong.ttf" />
+    <Content Include="fonts\gothic.ttf" />
+    <Content Include="fonts\gothicb.ttf" />
+    <Content Include="fonts\kaiu.ttf" />
+    <Content Include="fonts\MingLiU.ttf" />
+    <Content Include="fonts\msjhl.ttc" />
+    <Content Include="fonts\simfang.ttf" />
+    <Content Include="fonts\simhei.ttf" />
+    <Content Include="fonts\simsun.ttf" />
+    <Content Include="fonts\simsunb.ttf" />
+    <Content Include="fonts\WCL-02.ttf" />
+    <Content Include="fonts\wt011.ttf" />
+    <Content Include="js\vendor\angular-translate-2.7.2\angular-cookies.min.js.map" />
+    <Content Include="js\vendor\angular-translate-2.7.2\bower.json" />
+    <Content Include="js\vendor\angular-translate-2.7.2\README.md" />
+    <Content Include="js\vendor\jqm1.4.3\jquery.mobile-1.4.2.min.map" />
+    <Content Include="js\vendor\jqm1.4.3\jquery.mobile-1.4.3.min.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-animate.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-cookies.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-loader.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-resource.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-route.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-sanitize.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular-touch.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\angular.min.js.map" />
+    <Content Include="js\vendor\ng1.2.18\errors.json" />
+    <Content Include="js\vendor\ng1.2.18\version.json" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\lccpower - Web Deploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53355</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- Remove this to solve upload project to azure problem - unable to deploy project to azure due to  "This project references NuGet package(s) that are missing on this computer."
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

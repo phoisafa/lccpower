@@ -1,0 +1,19 @@
+﻿<div id="divPageSectionTitleWithSwitch{{page}}" role="banner" class="ui-header ui-bar-{{theme}}" data-theme="{{theme}}" ng-init="theme : 'c'">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 10%;">
+                &nbsp;
+            </td>
+            <td style="width: 80%;">
+                <h1 aria-level="1" role="heading" class="ui-title" style="max-height:2.2em;margin-top: -1%">
+                    {{ title  }}
+                </h1>
+            </td>
+            <td style="width: 5%; text-align: right;">
+                <div id="divSwitch{{page}}" class="toggle-bg {{status}}" ng-init="status : '{{defaultStatus}}'" ng-model="model" ng-click="buttonOnClick()">
+                    <span id="spanSwitch{{page}}" class="switch {{status}}"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

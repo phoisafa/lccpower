@@ -1,0 +1,1489 @@
+﻿html {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    /*font-family: Arial, sans-serif serif;*/
+}
+
+.divBarHeader {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+}
+
+    .divBarHeader table {
+        width: 100%;
+        height: 50px;
+        border: 0px solid;
+        padding: 0px;
+        border-spacing: 0px;
+    }
+
+        .divBarHeader table th, td {
+            border: 0px solid;
+            padding: 0px;
+            border-spacing: 0px;
+        }
+
+.divBarHeaderCol1 {
+    width: 695px;
+    height: 55px;
+    background-image: url("../../images/bg_page-header-1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 60px;
+}
+
+.divBarHeaderCol2 {
+    background-image: url("../../images/bg_page-header-2.png");
+    background-repeat: repeat-x;
+    background-position: center center;
+    height: 60px;
+}
+
+.divBarHeaderTitle {
+    float: left;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    margin-top: 0px;
+}
+
+    .divBarHeaderTitle table {
+        width: 100%;
+        height: 60px;
+        border: 0px solid;
+        padding: 0px;
+        border-spacing: 0px;
+    }
+
+        .divBarHeaderTitle table th td {
+            border: 0px solid;
+            padding: 0px;
+            border-spacing: 0px;
+        }
+
+.divBarHeaderTitleCol1 {
+    width: 25%;
+}
+
+.divBarHeaderTitleCol2 {
+    width: 50%;
+}
+
+    .divBarHeaderTitleCol2 table {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .divBarHeaderTitleCol2 table tr td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+            .divBarHeaderTitleCol2 table tr td img {
+                display: inline;
+                width: 40px;
+                height: 40px;
+            }
+
+            .divBarHeaderTitleCol2 table tr td span {
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+            }
+
+            .divBarHeaderTitleCol2 table tr td label {
+                font-size: 11px;
+                font-weight: bold;
+                color: white;
+            }
+
+            .divBarHeaderTitleCol2 table tr td #empty {
+                width: 5px;
+            }
+
+.divBarHeaderTitleCol3 {
+    width: 25%;
+    text-align: right;
+}
+
+@media screen and (min-width: 1px) and (max-width: 800px) {
+    .divColPages {
+        top: 75px;
+        left: 16px;
+        position: fixed;
+        float: left;
+        width: 20%; /*25%;*/
+        z-index: 99;
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .divColPagesBuilding {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 75%; /*67%;*/
+        min-height: 75%; /*67%;*/
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColPagesLocation {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 100%;
+        min-height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColPagesAHU {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 59%; /*53%;*/
+        min-height: 59%; /*53%;*/
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColContent {
+        margin-top: 45px; /*60px;*/
+        position: relative;
+        float: right;
+        width: 77%; /*70%;*/
+        z-index: 0;
+        margin-right: -0.5em;
+    }
+
+    .divColContentFullPage {
+        margin-top: 60px;
+        position: relative;
+        float: right;
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .divColPages {
+        top: 75px;
+        left: 16px;
+        position: fixed;
+        float: left;
+        width: 21%; /*26%;*/
+        z-index: 99;
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .divColPagesBuilding {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 100%; /*67%;*/
+        min-height: 100%; /*67%;*/
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColPagesLocation {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 100%;
+        min-height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColPagesAHU {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 48%;
+        min-height: 48%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColContent {
+        margin-top: 45px; /*60px;*/
+        position: relative;
+        float: right;
+        width: 77%; /*70%;*/
+        z-index: 0;
+        margin-right: -0.5em;
+    }
+
+    .divColContentFullPage {
+        margin-top: 60px;
+        position: relative;
+        float: right;
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+@media screen and (min-width: 801px) and (min-height: 1px) and (max-height: 700px) {
+    .divColPages {
+        top: 75px;
+        left: 16px;
+        position: fixed;
+        float: left;
+        width: 21%; /*26%;*/
+        z-index: 99;
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .divColPagesBuilding {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 100%; /*67%;*/
+        min-height: 100%; /*67%;*/
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColPagesLocation {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 100%;
+        min-height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColPagesAHU {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 34%;
+        min-height: 34%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .divColContent {
+        margin-top: 45px; /*60px;*/
+        position: relative;
+        float: right;
+        width: 77%; /*70%;*/
+        z-index: 0;
+        margin-right: -0.5em;
+    }
+
+    .divColContentFullPage {
+        margin-top: 60px;
+        position: relative;
+        Div-Empt float: right;
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+.divBarHeaderTitle table td .ui-input-btn:first-child {
+    /*width: 80px;*/
+    margin-left: 5px;
+}
+
+.divBarHeaderTitle table td .ui-input-btn:last-child {
+    /*margin-right: 5px;*/
+}
+
+.Div-Content1 {
+    background: #ffffff;
+    margin-top: 0px;
+}
+
+.Div-Content2 {
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-heading {
+    margin: 0;
+}
+
+.ui-li-static.ui-collapsible {
+    padding: 0;
+}
+
+    .ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
+        border-top-width: 0;
+    }
+
+    .ui-li-static.ui-collapsible > .ui-collapsible-heading.ui-collapsible-heading-collapsed > .ui-btn,
+    .ui-li-static.ui-collapsible > .ui-collapsible-content {
+        border-bottom-width: 0;
+    }
+
+.Div-Empty {
+    height: 8px; /*17px;*/
+}
+
+.imgBtn:hover {
+    opacity: 1;
+    /*Reflection*/
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+    /*Glow*/
+    -webkit-box-shadow: 0px 0px 50px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 50px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 50px rgba(255,255,255,0.8);
+}
+/*JQM Table*/
+.filter-list thead th,
+.filter-list tbody tr:last-child,
+.filter-size thead th,
+.filter-size tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.filter-list tbody th,
+.filter-list tbody td,
+.filter-size tbody th,
+.filter-size tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.filter-list tbody tr:last-child th,
+.filter-list tbody tr:last-child td,
+.filter-size tbody tr:last-child th,
+.filter-size tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.filter-list tbody tr:nth-child(odd) td,
+.filter-list tbody tr:nth-child(odd) th,
+.filter-size tbody tr:nth-child(odd) td,
+.filter-size tbody tr:nth-child(odd) th {
+    background-color: #eeeeee; /* non-RGBA fallback  */
+    background-color: rgba(0,0,0,.04);
+}
+
+.filter-list tbody tr:hover {
+    background-color: #66ad93;
+    background-color: rgba(102,173,147,.7);
+    color: white;
+}
+
+.filter-list tbody tr.rowselected {
+    background-color: #5e87b0;
+    background-color: rgba(94, 135, 176, 1);
+    color: white;
+}
+
+.ui-page {
+    /*background:#fff url('../../images/bg_camfil.jpg') no-repeat center bottom;*/
+    /*background: #d6d6d6;*/
+    background: #e8e8e8; /* Camfil Green 20%:#CCE4DB*/
+    /*background-color: rgba(255,0,0,0.5);*/
+    background-size: cover;
+}
+/*Table with Header Grouping*/
+.th-groups th {
+    text-align: center;
+    background-color: rgba(0,0,0,.1);
+    border-right: 1px solid #fff;
+}
+
+    .th-groups th.totals {
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+        text-shadow: none;
+    }
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+    th.ui-table-priority-1,
+    td.ui-table-priority-1 {
+        display: table-cell;
+    }
+}
+/* Show priority 2 at 480px (30em x 16px) */
+@media screen and (min-width: 30em) {
+    th.ui-table-priority-2,
+    td.ui-table-priority-2 {
+        display: table-cell;
+    }
+}
+/* Show priority 3 at 640px (40em x 16px) */
+@media screen and (min-width: 40em) {
+    th.ui-table-priority-3,
+    td.ui-table-priority-3 {
+        display: table-cell;
+    }
+}
+/* Show priority 4 at 800px (50em x 16px) */
+@media screen and (min-width: 50em) {
+    th.ui-table-priority-4,
+    td.ui-table-priority-4 {
+        display: table-cell;
+    }
+}
+/* Show priority 5 at 960px (60em x 16px) */
+@media screen and (min-width: 60em) {
+    th.ui-table-priority-5,
+    td.ui-table-priority-5 {
+        display: table-cell;
+    }
+}
+/* Show priority 6 at 1200 (75em x 16px) */
+@media screen and (min-width: 75em) {
+    th.ui-table-priority-6,
+    td.ui-table-priority-6 {
+        display: table-cell;
+    }
+}
+/* Manually hidden */
+th.ui-table-cell-hidden,
+td.ui-table-cell-hidden {
+    display: none;
+}
+/* Manually shown */
+th.ui-table-cell-visible,
+td.ui-table-cell-visible {
+    display: table-cell;
+}
+/*Table with Header Grouping*/
+/*Grid*/
+.gridTile a:visited {
+    color: #00673E;
+    background-color: #41F8C4;
+    text-decoration: none;
+}
+
+.gridTile div {
+    display: block;
+}
+
+.live-tile {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 0 10px 10px 0;
+    color: #fff;
+    border: 1px solid #f0f0f0;
+    word-wrap: break-word;
+}
+
+.tile-image {
+    width: 100%;
+    height: 100%;
+}
+
+.tile-image-hover {
+    background: url('/resources/images/video-play-small.png') no-repeat center center;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.live-tile div.ms-tileview-tile-titleMedium {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ms-tileview-tile-titleMedium, .ms-tileview-tile-titleLarge {
+    color: #fff;
+    font-size: 1em;
+}
+
+.live-tile div.ms-tileview-tile-descriptionMedium {
+    margin: 0;
+    padding: 0 10px 10px 10px;
+}
+
+.live-tile div.live-tile-hover {
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0) transparent;
+    background: rgba(0, 0, 0, 0.75);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+/*Grid*/
+/*.highlight { 
+    background:#41F8C4 !important;
+}
+.dehighlight { 
+    background:white !important;
+    border: 2px red solid !important;
+}
+.highlightbox { 
+    background:#41F8C4 !important;
+}
+.dehighlightbox { 
+    background:white !important;
+    border: 2px red solid !important;
+}
+.dehighlightForRatioButton { 
+    color: black !important;
+}
+.highlightForRatioButton { 
+    color: #F84072 !important;
+}*/
+.popupPhotoPortrait {
+    /*border-color: #999;
+    color: #222;
+    text-shadow: 0 1px 0 #fff;
+    max-width: 400px;
+    min-height: 540px;*/
+    /*transform: rotate(90deg);*/
+}
+
+.imgPopupPhotoPortrait {
+    /*max-height: 100% !important;*/
+    /*transform: rotate(90deg);*/
+    /*margin-left: -17.5%;
+    margin-top: 17%;
+    max-width: 135% !important;*/
+}
+
+.popupPhotoLandscape {
+    /*transform: rotate(180deg);*/
+}
+
+.imgPopupPhotoLandscape {
+    /*transform: rotate(180deg);*/
+}
+
+.popupRotate90 {
+    transform: rotate(90deg);
+}
+
+.popupRotate180 {
+    transform: rotate(180deg);
+}
+
+.popupRotate270 {
+    transform: rotate(270deg);
+}
+
+.popupRotateReset {
+    transform: rotate(0deg);
+}
+
+.popupRotateLeftBtn90 {
+    margin-top: 405px !important;
+}
+
+.popupRotateRightBtn90 {
+    margin-right: 546px !important;
+}
+
+.popupRotateLeftBtn180 {
+    margin-top: 405px !important;
+    margin-left: 546px !important;
+}
+
+.popupRotateRightBtn180 {
+    margin-top: 405px !important;
+    margin-right: 546px !important;
+}
+
+.popupRotateLeftBtn270 {
+    margin-left: 546px !important;
+}
+
+.popupRotateRightBtn270 {
+    margin-top: 405px !important;
+}
+
+.hideme {
+    height: 1px !important;
+    border: none !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+.offscreen {
+    height: 1px !important;
+    width: 1px !important;
+    position: absolute !important;
+    overflow: hidden !important;
+    top: -10px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+.TurnOnSwitch, .TurnOffSwitch {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.TurnOnSwitch, .TurnOffSwitch {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+i.TurnOnSwitch {
+    color: #5cb85c
+}
+
+i.TurnOffSwitch {
+    color: #d9534f
+}
+
+.cleanRoomPic label {
+    font-size: 12px !important;
+    font-weight: bold;
+    color: #8a8a8a;
+    text-align: left
+}
+
+.cleanRoomPic a label {
+    text-align: center !important;
+}
+
+.airFlowLabel {
+    color: #307FE2 !important; /*Camfil blue color tone:Ocean*/
+}
+
+.systemLabel {
+    color: red !important;
+}
+
+.particleConcLabel {
+    color: #ff8c00 !important;
+}
+
+.particleSizeLabel {
+    color: black !important;
+}
+
+.roomDimensionLabel {
+    color: #8a2be2 !important;
+}
+
+.entryFormWithCleanRoomLayout {
+    /*padding:5px;
+   border-style:solid;
+   border-radius:1em;
+   background-color:#e8f9fb; 
+   border-width:1px;*/
+    padding: 5px 5px 5px 20px;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    border-color: #bbb;
+    border-style: outset;
+}
+
+    .entryFormWithCleanRoomLayout .ui-field-contain label {
+        min-width: 200px;
+        font-size: 0.85em !important;
+        text-align: left;
+    }
+
+    .entryFormWithCleanRoomLayout .HeaderLabel {
+        width: 100%;
+    }
+
+        .entryFormWithCleanRoomLayout .HeaderLabel label {
+            width: 100%;
+            /*color:#00688b;*/
+            font-weight: bold;
+            text-align: left;
+        }
+
+    .entryFormWithCleanRoomLayout .ui-field-contain div {
+        width: 80px;
+        height: 28px;
+    }
+    /*.entryFormWithCleanRoomLayout .lastRow {
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 2px;
+    padding-bottom: 10px;
+}*/
+    .entryFormWithCleanRoomLayout .ui-field-contain {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+        .entryFormWithCleanRoomLayout .ui-field-contain .ui-radio {
+            width: 50px;
+            height: 25px;
+        }
+
+            .entryFormWithCleanRoomLayout .ui-field-contain .ui-radio label {
+                min-width: 50px;
+                font-size: 0.80em !important;
+                text-align: center;
+                vertical-align: top;
+                margin: 0px;
+                padding: 3px;
+            }
+
+.longRadioButton .ui-radio, .longRadioButton .ui-radio label {
+    min-width: 150px;
+}
+/*.specialRadioButton .ui-radio {
+    width:60px !important;
+}*/
+/*.specialRadioButton .ui-radio .ui-btn-active {
+    background-color:#0000ee !important;
+}*/
+.labelRadioButtonAlign .ui-controlgroup-label {
+    width: 55% !important; /*65% !important;*/
+    vertical-align: top;
+    padding: 2px;
+    margin: 0px;
+    font-size: 0.85em;
+}
+
+.labelRadioButtonAlign .ui-controlgroup-controls {
+    width: 45% !important; /*30% !important;*/
+    vertical-align: middle;
+    padding-top: 0px;
+}
+
+.labelRadioButtonDiffRow .ui-controlgroup-controls {
+    width: 100% !important;
+}
+
+.linkButtonWithImage {
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    background-color: white;
+    font-size: 12px;
+    border-style: solid;
+    border-radius: 0.85em;
+}
+/*.smallBlueButton {
+    border-radius: 1em;
+    color: white !important;
+    background-color: #0000ee !important;
+    font-size: 11px;
+    width:50px !important;
+    border-width:1px;
+}
+.smallButton {
+    border-radius: 1em;
+    color: black !important;
+    background-color: #e0eeee !important;
+    font-size: 11px;
+    width:50px !important;
+    border-width:2px;
+    border-color:#838b8b !important;
+
+}*/
+.smallBlueButton {
+    border-radius: 1em;
+    background-color: #396b9e !important;
+    border-color: #044062 !important;
+    color: #fff !important;
+    text-shadow: 0 1px 1px #194b7e !important;
+    font-size: 11px;
+    width: 50px !important;
+    border-width: 1px;
+}
+
+.smallButton {
+    border-radius: 1em;
+    color: #8a8a8a !important;
+    /*background-color: #f0ffff !important;*/
+    background-color: white !important;
+    font-size: 11px;
+    width: 50px !important;
+    border-width: 2px;
+    /*border-color:#d8e5e5 !important;*/
+    border-color: #8a8a8a !important;
+}
+
+.checkBoxSelection .ui-checkbox label {
+    border-style: none;
+    /*background-color: #e8f9fb !important;*/
+    font-weight: normal;
+}
+
+.checkBoxSelection .ui-controlgroup-controls, .checkBoxSelection .ui-controlgroup-controls .ui-checkbox {
+    width: 100% !important;
+}
+
+.systemDesignMenu .ui-controlgroup-controls {
+    margin-top: -7px;
+}
+
+.entryForm {
+    padding: 5px;
+    border-style: none;
+    border-radius: 0px;
+    background-color: white;
+}
+
+    .entryForm .ui-field-contain label {
+        min-width: 250px;
+        font-size: 0.85em !important;
+        text-align: left;
+    }
+
+    .entryForm .HeaderLabel {
+        width: 100%;
+    }
+
+        .entryForm .HeaderLabel label {
+            width: 100%;
+            /*color:#00688b;*/
+            font-weight: bold;
+            text-align: left;
+        }
+
+    .entryForm .ui-field-contain div {
+        width: 100px;
+        height: 28px;
+    }
+/*.entryForm  .lastRow {
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 2px;
+    padding-bottom: 10px;
+}*/
+.lastRow {
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 2px !important;
+    padding-bottom: 10px;
+}
+
+.entryForm .ui-field-contain {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.HVAC, .HEPA {
+    width: 98.3%;
+}
+
+    .HVAC .ui-field-contain,
+    .HEPA .ui-field-contain {
+        margin: 5px;
+    }
+
+    .HVAC .ui-controlgroup-label {
+        width: 22% !important;
+        vertical-align: top;
+        padding: 2px;
+        margin: 6px 0px 0px 0px;
+        font-size: 0.85em;
+    }
+
+    .HEPA .FilterSolution .ui-controlgroup-label, .HEPA .ui-controlgroup-controls {
+        width: 50% !important;
+        vertical-align: top;
+        padding: 2px;
+        margin: 0px 0px -4px 0px;
+        font-size: 0.85em !important;
+    }
+
+        .HEPA .ui-controlgroup-controls .ui-input-text {
+            font-size: 1em !important;
+        }
+
+    .HEPA .FilterPerformance .ui-controlgroup-label, .HEPA .ui-controlgroup-controls {
+        width: 50% !important;
+        vertical-align: top;
+        padding: 0px;
+        margin: 0px 0px -4px 0px;
+        font-size: 0.8em;
+    }
+
+    .HEPA .ui-controlgroup-controls {
+        margin-top: -1px !important;
+        padding-left: 0px !important;
+    }
+
+    .HVAC .title .ui-controlgroup-label {
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: #456f9a;
+        padding-bottom: 1.4px !important;
+    }
+
+    .HEPA .title .ui-controlgroup-label {
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: #456f9a;
+        padding-bottom: 6px !important;
+    }
+
+    .HVAC .ui-controlgroup-controls {
+        width: 70% !important;
+        vertical-align: middle;
+        padding-top: 0px;
+    }
+
+        .HVAC .ui-controlgroup-controls .ui-radio label,
+        .HEPA .ui-controlgroup-controls .ui-radio label {
+            font-size: 14px;
+            padding: 7px 8px 7px 8px;
+        }
+
+    .HVAC h3, .HEPA h3 {
+        margin: 2px;
+        color: #00673e;
+    }
+
+    .HVAC .ExchangeCriteria .ui-controlgroup-label {
+        width: 20% !important;
+    }
+
+    .HVAC .ExchangeCriteria .ui-controlgroup-controls {
+        width: 80% !important;
+    }
+    /*.HEPA .FilterSolution {
+    margin:-3px 8px 0px 8px;
+}*/
+    .HVAC .FilterSolution .ui-field-contain,
+    .HEPA .FilterSolution .ui-field-contain {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .HEPA .FilterPerformance .ui-field-contain {
+        margin: 0px;
+    }
+
+    .HVAC .FilterSolution .labelLinkBtnWithImg,
+    .HEPA .FilterSolution .labelLinkBtnWithImg {
+        margin-top: -5px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .HVAC .FilterSolution .ui-block-a, .HVAC .FilterSolution .ui-block-b, .HVAC .FilterSolution .ui-block-c {
+        width: 33%;
+        text-align: center;
+        /*height:30px;*/
+    }
+
+    .HEPA .FilterSolution .ui-block-a, .HEPA .FilterSolution .ui-block-b, .HEPA .FilterSolution .ui-block-c,
+    .HEPA .FilterPerformance .ui-block-a {
+        width: 100%;
+        text-align: center;
+        /*height:30px;*/
+    }
+
+    .HVAC .FilterSolution label, .FilterSolution input, .FilterSolution .ui-controlgroup-label, .FilterSolution a,
+    .HEPA .FilterSolution label, .FilterSolution input, .FilterSolution .ui-controlgroup-label, .FilterSolution a,
+    .HEPA .FilterPerformance label {
+        font-size: 0.85em !important;
+    }
+
+    .HVAC .FilterSolution .ui-controlgroup-label legend,
+    .HEPA .FilterSolution .ui-controlgroup-label legend,
+    .HEPA .FilterPerformance .ui-controlgroup-label legend {
+        text-align: center;
+        width: 100%;
+    }
+
+    .HEPA .FilterSolution .inputBox {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: -5px;
+    }
+
+    .HVAC .FilterSolution .inputBox {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: -2px;
+        margin-bottom: -2px;
+    }
+
+    .HVAC .FilterSolution .selectFilter,
+    .HEPA .FilterSolution .selectFilter {
+        height: 35px;
+    }
+
+    .HVAC .rowWithGrayBackground {
+        background: #e9e9e9 !important;
+        border-radius: 0 !important;
+        padding: 3px 0px 3px 0px !important;
+    }
+
+    .HEPA .rowWithGrayBackground {
+        background: #e9e9e9 !important;
+        border-radius: 0 !important;
+        padding: 3px 0px 0px 0px !important;
+    }
+
+    .HEPA .FilterPerformance .rowWithLightBlueBackground {
+        /*background-color: #d1f4f8;*/
+        background-color: #e2e2e2;
+        border-radius: 0px;
+        padding: 3px 0px 3px 0px;
+    }
+
+        .HEPA .FilterPerformance .rowWithLightBlueBackground label {
+            margin-left: 0px;
+            margin-top: 4px;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            color: #646464;
+        }
+
+    .HEPA .FilterPerformance .rowWithGrayBackground {
+        background-color: #d1f4f8;
+        border-radius: 0px;
+        padding: 3px 0px 3px 0px;
+    }
+
+input.es-input {
+    font-size: 0.85em !important;
+    width: 100%;
+}
+
+.smallComboBox div {
+    width: 30% !important;
+    font-size: 17px !important;
+}
+
+.smallComboBox100 div {
+    width: 100% !important;
+    font-size: 17px !important;
+    margin: 0px;
+}
+#cboFuelCostUnit-button {
+    font-size: 13px !important;
+    width: 200% !important;
+}
+#cboHeatRateOfEngineUnit-button {
+    font-size: 13px !important;
+    width: 200% !important;
+}
+.cbxEnvironment div {
+    width: 68% !important;
+}
+
+.cbxNonEditableDropDownList div {
+    width: 50% !important;
+}
+
+.cbxNonEditableDropDownList2 div {
+    width: 60% !important;
+}
+.cbxNonEditableDropDownList2 label {
+    width: 30% !important;
+}
+#cboSolutions-button {
+    width: 100% !important;
+}
+.smallComboBoxInTable div {
+    /*width: 40% !important;*/
+    font-size: 0.85em !important;
+}
+
+.smallComboBoxInTable div {
+    font-size: 17px !important;
+}
+
+.smallComboBoxInGrid div {
+    width: 108% !important;
+    font-size: 0.85em !important;
+    margin: 3px 0px 3px -5px;
+}
+
+.smallComboBoxInGrid2 div {
+    width: 105% !important;
+    font-size: 1em !important;
+    margin: 3px 0px 3px -5px;
+}
+
+.es-list li {
+    color: #4c4c4c;
+    text-shadow: none;
+    font-size: 0.85em;
+}
+
+.smallRadioButton .ui-radio {
+    width: 50px;
+    height: 25px;
+}
+
+.smallRadioButton fieldset {
+    margin: 0px 2px 0px 2px;
+}
+
+.smallRadioButton .ui-radio label {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    font-size: 0.80em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.smallRadioButton .ui-radio .ui-btn-active {
+    /*background-color:  #e0eeee !important;
+    border-color: #b3bebe !important;
+    color: #595f5f !important;
+    text-shadow: none !important;*/
+    background-color: #6ad1e3 !important;
+    border: none !important;
+    color: #333f48 !important;
+    text-shadow: none !important;
+}
+/*.unitMeasurementSelection {
+    margin:0px !important;
+}
+.unitMeasurementSelection label, .unitMeasurementSelection button {
+    width:60px;
+    height:28px;
+    font-size:small !important;
+}
+.unitMeasurementSelection legend {
+    width:100%;
+    text-align:right;
+}
+.unitMeasurementSelection div, .unitMeasurementSelection table tr {
+    margin:0.1em 0 0.1em 0;
+}
+
+.unitMeasurementSelection .ui-controlgroup-controls {
+    width:55%;
+}
+.unitMeasurementSelection .ui-field-contain div {
+    text-align:right;
+}
+.unitMeasurementSelection legend .ui-field-contain div {
+    width:80px;
+    min-height:0px;
+    height:25px;
+    text-align:right;
+}
+.unitMeasurementSelection .inputBox div {
+    width:80px;
+    min-height:0px;
+    height:25px;
+    text-align:right;
+}
+.smallInputBox div {
+    width:80px !important;
+    height:28px;
+    margin-bottom:2px;
+}
+.smallInputBox label {
+    font-size:0.80em !important;
+    margin-bottom:-10px;
+}
+.roundButton {
+    width: 90% !important;
+    border-radius: 1em !important;
+    border-width: 2px  !important;
+    background-color: #d3d3d3 !important;
+}
+.rowWithButton {
+     height: 35px !important;
+     padding: 3px;
+}*/
+.tabNoSelected {
+    color: #044062 !important;
+    background-color: white !important;
+    text-shadow: none !important;
+    border-style: none !important;
+}
+
+.hideElement {
+    display: none;
+}
+
+.Result a {
+    width: 23%;
+    font-size: 0.9em;
+    white-space: normal;
+    height: 43px;
+    text-align: center;
+    line-height: 20px;
+    /* vertical-align: top; */
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.selectedButton {
+    background-color: #396b9e !important;
+    color: white !important;
+    text-shadow: none !important;
+}
+
+.cleanRoomClassResult label {
+    width: 80%;
+    /*text-align:right;*/
+    font-size: 0.9em;
+}
+
+.cleanRoomClassResult .result {
+    width: 80%;
+    /*text-align:left;*/
+    color: #34B4E4;
+    font-weight: bold;
+}
+
+.tblTCO {
+    width: 90%;
+    font-size: 0.85em;
+}
+
+.tblTotalCost {
+    width: 90%;
+    font-size: 0.85em;
+    background-color: #CCE4DB;
+}
+
+    .tblTotalCost thead {
+        width: 90%;
+        font-size: 0px;
+        visibility: hidden;
+    }
+
+    .tblTotalCost tbody {
+        width: 90%;
+        font-weight: bold;
+    }
+
+.costBreakdown td {
+    text-align: center;
+}
+
+.tabHVACResultStyle a {
+    width: 100%;
+}
+
+.reportSelection .ui-checkbox label {
+    border-style: none;
+    /*background-color: #e8f9fb !important;*/
+    font-weight: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.reportSelection .ui-controlgroup-label {
+    margin-bottom: 10px;
+}
+
+.reportSelection .ui-controlgroup-controls, .checkBoxSelection .ui-controlgroup-controls .ui-checkbox {
+    width: 100% !important;
+}
+
+.roundButton {
+    width: 70% !important;
+    border-radius: 1em !important;
+    border-width: 2px !important;
+    background-color: #d3d3d3 !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.rowWithButton {
+    height: 35px !important;
+    padding: 3px;
+}
+
+
+.ui-icon-greenLight {
+    background-image: url("../../images/green_light.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    /*background-position-x:80%;
+    background-position-y:40%;*/
+    background-position: 80% 40%;
+}
+
+.ui-icon-redLight {
+    background-image: url("../../images/red_light.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    /*background-position-x:80%;
+    background-position-y:40%;*/
+    background-position: 80% 40%;
+}
+
+.ui-icon-yellowLight {
+    background-image: url("../../images/yellow_light.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    /*background-position-x:80%;
+    background-position-y:40%;*/
+    background-position: 80% 40%;
+}
+
+.pageMenuHeader, .pageMenuHeader .ui-btn-active {
+    background-color: #396b9e !important;
+    border-color: #044062 !important;
+    color: #fff !important;
+    text-shadow: 0 1px 1px #194b7e !important;
+}
+
+.ulColPages > li > a.ui-btn {
+    border-width: 0px 1px 1px 0px !important;
+    border-color: #a8a8a8 !important;
+}
+input[readonly] {
+    background-color: #e5e5e5;
+}
+.inputTopLabel, .inputTopLabel > .ui-input-text, .inputTopLabel > label {
+    width: 100% !important;
+    margin: 0.2em 0;
+}
+
+.reportSelection .ui-checkbox label {
+    border-style: none;
+    /*background-color: #e8f9fb !important;*/
+    font-weight: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.reportSelection .ui-controlgroup-label {
+    margin-bottom: 10px;
+}
+
+.reportSelection .ui-controlgroup-controls, .checkBoxSelection .ui-controlgroup-controls .ui-checkbox {
+    width: 100% !important;
+}
+
+#fsFilterStage>div{
+    width:100%!important;
+}
+
+.tabSolutionsToCompare {
+    border-width: 0.3px;
+    border-style: none;
+    background-color: #fff !important;
+    border-color: #bbb !important;
+    color: #333 !important;
+    text-shadow: 0 1px 0 #fff !important;
+}
+
+#ulSystems li {
+    border-style: solid;border-width: 0.3px;border-color: #bbb;
+}
+
+.tblCosts {
+    background-color: #EBEBEB !important
+}
+
+.tblCostsWith1Col {
+    width: 38.3% !important;
+}
+
+.tblCostsWith2Col {
+    width: 78% !important;
+}
+.tblCostsWith3col {
+    width: 100% !important;
+}
+.tblColWithBGWhite {
+    background-color: white !important;
+}
+
+.tblFilterWith1Col {
+    width: 100% !important;
+}
+.tblFilterWith2Col {
+    width: 50% !important;
+}
+.tblFilterWith3Col {
+    width: 33.33% !important;
+}
+.input-disabled {
+    background-color: #e5e5e5 !important;
+    border: 1px solid #ABADB3 !important;
+}
+.DivChartStyle {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DCDCDC;
+    padding-bottom: 8px;
+}
+.CellStyleFirst {
+    padding-left: 8px;
+}
+
+.CellStyleLast {
+    padding-right: 8px;
+}
+
+.CellStyleAlternate {
+    background: #F2F2F2;
+}
+
+#popupChart-popup {
+    max-width: 90% !important;
+}
+
+.CellStyleTable42 {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    height: 42px;
+}
+.gridColumnHeader {
+    background: #66AD93;
+    background-image: linear-gradient( #00673E, #66AD93 );
+}
+.gridColumnHeader label {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #eee;
+}
+.gridColumnHeader2 {
+    background: #bbb;
+    background-image: linear-gradient( #ddd, #bbb );
+}
+.gridColumnHeader2 label {
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #eee;
+}
+
+#divBtnCompare div{
+    float:right;
+}
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.resultsBreakdown {
+    font-size:0.95em;
+}
+.resultsCostPercentage {
+    font-size: small;
+    font-style: italic;
+}
+
+
+
